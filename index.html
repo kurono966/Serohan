@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="ハングル一音節に、概念と役割を。人工言語セロハン語の文法・80語根・例文を読むための資料サイト。"><title>Serohan — セロハン語</title><link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#main">本文へ移動</a><header class="topbar"><a class="brand" href="#home">세로한 <span>SEROHAN</span></a><span class="edition">LANGUAGE NOTES · 2026</span></header>
-<div class="layout"><aside><nav aria-label="章ナビゲーション"><a class="home-link" href="#home">はじめに</a><a href="#overview"><span>01</span>設計概要</a><a href="#grammar"><span>02</span>基本文法</a><a href="#grammar-v06"><span>03</span>Ver.0.6 文法拡張</a><a href="#grammar-v07"><span>04</span>Ver.0.7 複合修飾</a><a href="#dictionary"><span>05</span>語根辞書</a><a href="#migration"><span>06</span>Ver.0.7 移行表</a><a href="#particles"><span>07</span>助詞</a><a href="#verb-inflection"><span>08</span>動詞活用案</a><a href="#examples"><span>09</span>例文集</a></nav><div class="sidebar-note">概念 → 役割 → 関係<br>小さな規則で、豊かな表現を。</div></aside>
+<div class="layout"><aside><nav aria-label="章ナビゲーション"><a class="home-link" href="#home">はじめに</a><a href="#overview"><span>01</span>設計概要</a><a href="#grammar"><span>02</span>基本文法</a><a href="#grammar-v06"><span>03</span>Ver.0.6 文法拡張</a><a href="#grammar-v07"><span>04</span>Ver.0.7 複合修飾</a><a href="#grammar-v08"><span>05</span>Ver.0.8 存在・所有</a><a href="#dictionary"><span>06</span>語根辞書</a><a href="#migration"><span>07</span>Ver.0.7 移行表</a><a href="#particles"><span>08</span>助詞</a><a href="#verb-inflection"><span>09</span>動詞活用案</a><a href="#examples"><span>010</span>例文集</a></nav><div class="sidebar-note">概念 → 役割 → 関係<br>小さな規則で、豊かな表現を。</div></aside>
 <main id="main"><section id="home" class="hero"><div class="eyebrow">A CONSTRUCTED LANGUAGE</div><h1>一音節から、<br>広がることば。</h1><p class="intro">ハングルの構造から生まれた人工言語、セロハン語。<br>一つの概念に終声を添えて、表現のかたちを変える。</p><div class="word-study"><div><b lang="ko">메</b><span>概念 / 愛</span></div><span class="arrow" aria-hidden="true">→</span><div><b lang="ko">멕</b><span>行為 / 愛する</span></div><span class="arrow" aria-hidden="true">→</span><div><b lang="ko">멥</b><span>修飾 / 愛をもって</span></div></div><div class="hero-bottom"><a class="button" href="#grammar">基本文法から読む <span aria-hidden="true">↗</span></a><p>80 語根 <span> / </span> 5 基本助詞 <span> / </span> SVO 語順</p></div><p class="scope">基本体系と活用の試案を収録。未定の規則は各章に明記しています。</p></section><section class="chapter" id="overview" aria-label="設計概要"><div class="chapter-label">SEROHAN / 設計概要</div><blockquote><strong>Ver.0.7 語彙に関する注記</strong>：この概要は旧104語根体系の例示を含みます。現在の圧縮案は <a href="#dictionary">dictionary.md</a>（80使用・24未使用）、詳細は <a href="#migration">lexicon-v0.7-migration.md</a> を参照してください。母音の再設計は未確定です。</blockquote>
 <h2 id="overview-1">セロハン語（Serohan）設計概要 Ver.0.5</h2>
 <h3 id="overview-2">概要</h3>
@@ -216,7 +216,25 @@
 <p>上記はいずれも <strong>使用80語根のみ</strong>から組み立てた説明例であり、「ゲーム」「音楽」等の固定語義を新設しない。</p>
 <h3 id="grammar-v07-7">6. 音声と書記の原則・未解決課題</h3>
 <ol><li><strong>必須の文法的区別は音声でも伝えられること</strong>。発音できない括弧に文法上の意味を持たせない。</li><li>複数属性形は並列、<code>후</code> は右結合という規則を共有することで、構文上の結合方向を統一する。</li><li>文脈による意味の曖昧さ（所有か内容かなど）は残る。これは結合構造の曖昧さとは別問題。</li><li>長い句の聞き取りやすさ、自然な休止、照応、左結合の言い換え、属性述語と名詞句の境界は今後検証する。</li><li>新たな助詞・関係節・等値文・発音可能な区切りマーカーは、この改訂では採用しない。</li></ol>
-<p>この文書は <a href="#grammar-v06">Ver.0.6仕様</a> に優先する、Ver.0.7の最新の複合修飾規則とする。</p></section><section class="chapter" id="dictionary" aria-label="語根辞書"><div class="chapter-label">SEROHAN / 語根辞書</div><div class="search"><label for="dictionary-search">語根を探す</label><input id="dictionary-search" type="search" placeholder="ハングル・ラテン転写・日本語で検索" autocomplete="off"><p id="search-status" role="status" aria-live="polite"></p></div><h2 id="dictionary-1">セロハン語 語根辞書 Ver.0.7（80語根・24未使用枠）</h2>
+<p>この文書は <a href="#grammar-v06">Ver.0.6仕様</a> に優先する、Ver.0.7の最新の複合修飾規則とする。</p></section><section class="chapter" id="grammar-v08" aria-label="Ver.0.8 存在・所有"><div class="chapter-label">SEROHAN / Ver.0.8 存在・所有</div><h2 id="grammar-v08-1">セロハン語 Ver.0.8 存在・所有・照応（試験採用）</h2>
+<p>Ver.0.7の80語根、SVO、修飾と後置助詞の右結合を維持する。新しい語根・助詞は増やさず、発音できない記号に文法上の役割を与えない。</p>
+<h3 id="grammar-v08-2">存在動詞</h3>
+<p>既存語根 <code>가</code>（物・対象）から、<code>ㄱ</code>終声の動詞形<code>각</code>を「存在する・ある・いる」として採用する。</p>
+<ul><li><code>옴 각.</code>：木が存在する。</li><li><code>기 각 제 히.</code>：情報媒体が建物にある。</li><li><code>네 각 소 히.</code>：あなたはその場所にいる。</li></ul>
+<p>構文：<code>存在主体 각 (所在先 히)</code>。存在主体が主語であり、<code>히</code>句は場所・関係先。</p>
+<h3 id="grammar-v08-3">所在を用いる所有</h3>
+<p><code>X 각 Y 히</code>は「YのところにXがある」。文脈によって「YがXを持つ」と解釈する。</p>
+<ul><li><code>자 각 나 히.</code>：私に道具がある／私は道具を持っている。</li><li><code>자 각 네 히.</code>：あなたのところに道具がある。</li><li><code>나 후 자 각.</code>：私に関係する道具が存在する。</li><li><code>네 후 자 각 나 히.</code>：あなたに関係する道具が私のところにある。</li></ul>
+<p><code>히</code>は存在文では所在・関係先を示すが、法的所有権まで指定しない。所有・関連を表す<code>후</code>と、存在文の所在を表す<code>히</code>は機能が異なる。</p>
+<h3 id="grammar-v08-4">照応（制限付き試験採用）</h3>
+<p>既存の<code>가</code>（対象）と<code>니</code>（言葉を扱う人）は、先行する話題に<strong>対象が一つだけ</strong>ある場合、それを指し直すことができる。</p>
+<ul><li><code>나 렉 기. 가 킬.</code>：私は情報媒体を作る。それは良い。</li><li><code>니 멕 차. 니 멕 치.</code>：ある人物は音を好む。その人物は言語を好む。</li></ul>
+<p>候補となる対象が複数あれば、照応先が曖昧になるためこの用法は避ける。<code>나</code>（私）、<code>네</code>（他者）の基本用法は維持。</p>
+<h3 id="grammar-v08-5">文の接続（未採用の検討案）</h3>
+<ul><li><code>節A 하 節B</code>：「そして」。名詞の並列との境界が不明。</li><li><code>節A 호 節B</code>：「だから」。起点助詞との境界が不明。</li><li><code>節A 타 節B</code>：「もし」。真理の語義との衝突が不明。</li></ul>
+<p>接続詞としてはまだ正式採用しない。独立文を並べることはできるが、それだけで因果や条件は確定しない。</p>
+<h3 id="grammar-v08-6">未解決</h3>
+<p>所在と所有権の区別、照応先が複数ある場合、文の接続と音声上の節境界、存在動詞の否定や時制の具体的運用は今後検証する。Ver.0.7の修飾規則は引き続き有効。</p></section><section class="chapter" id="dictionary" aria-label="語根辞書"><div class="chapter-label">SEROHAN / 語根辞書</div><div class="search"><label for="dictionary-search">語根を探す</label><input id="dictionary-search" type="search" placeholder="ハングル・ラテン転写・日本語で検索" autocomplete="off"><p id="search-status" role="status" aria-live="polite"></p></div><h2 id="dictionary-1">セロハン語 語根辞書 Ver.0.7（80語根・24未使用枠）</h2>
 <h3 id="dictionary-2">運用上の注意</h3>
 <p>この辞書は13初声×8母音＝104枠のうち80語根を使用し、24枠を未使用にするVer.0.7の暫定設計。語根数は80であり、未使用枠の旧語義は使用しない。母音の意味領域は検証中の目安であり、既存の母音説明を最終確定したものではない。韓国語の同じ綴りから意味を借用しない。</p>
 <p><code>네</code> は他者を指し、対話では「あなた」、文脈によって「その人」と解釈する。<code>너</code> は未採用。ㅎ系列は助詞専用で、語根として派生させない。</p>
