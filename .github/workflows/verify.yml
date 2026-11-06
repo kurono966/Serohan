@@ -14,5 +14,6 @@ jobs:
       - run: python translation_data.py
       - run: python verify.py
       - run: python audit_lexicon.py
+      - run: python integrate_v11.py
       - run: python build.py
-      - run: git diff --exit-code -- translation-cases.json translation-report.md audit-lexemes.json index.html
+      - run: git diff --exit-code -- translation-cases.json translation-report.md audit-lexemes.json grammar-v1.1.md v1.1-translations.json v1.1-translations.md index.html

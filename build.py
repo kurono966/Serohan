@@ -2,12 +2,17 @@
 from html import escape
 from pathlib import Path
 import re
+import unicodedata
 
 ROOT = Path(__file__).resolve().parent
 PAGES = [
     ('overview', '設計概要', 'overview.md'),
     ('grammar', '基本文法', 'grammar.md'),
     ('grammar-v09', 'Ver.0.9 否定・設計判断', 'grammar-v0.9.md'),
+    ('grammar-v11', 'Ver.1.1 統合仕様', 'grammar-v1.1.md'),
+    ('auxiliaries', '助動詞の採用履歴', 'auxiliaries-v1.0.md'),
+    ('clauses', '節の採用履歴', 'clauses-v1.0.md'),
+    ('roundtrips', 'Ver.1.1 翻訳検証', 'v1.1-translations.md'),
     ('dictionary', '語根辞書', 'dictionary.md'),
     ('particles', '助詞', 'particles.md'),
     ('verb-inflection', '動詞活用（試験運用）', 'verb-inflection.md'),
@@ -20,7 +25,12 @@ PAGES = [
 ]
 
 
-def inline(text):
+def heading_fragment(text):
+    return ''.join(c for c in text.lower() if c in '-_' or
+                   not unicodedata.category(c).startswith(('P', 'S'))).replace(' ', '-')
+
+
+def inline(text, slug=None):
     text = escape(text)
     # Protect inline code before applying other inline syntax.
     codes = []
@@ -30,9 +40,11 @@ def inline(text):
     text = re.sub(r'`([^`]+)`', code, text)
     def link(match):
         label, target = match.groups()
-        for slug, _, filename in PAGES:
+        if slug and target.startswith('#'):
+            target = '#' + slug + '-' + target[1:]
+        for page_slug, _, filename in PAGES:
             if target == filename:
-                target = '#' + slug
+                target = '#' + page_slug
         return f'<a href="{target}">{label}</a>'
     text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', link, text)
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
@@ -42,6 +54,7 @@ def inline(text):
 def render(source, slug):
     lines = source.splitlines()
     output, i, heading = [], 0, 0
+    fragments = {}
     def special(line):
         return bool(re.match(r'^(#{1,6} |```|\||> |[-*] |\d+\. |---+$)', line))
     while i < len(lines):
@@ -61,7 +74,13 @@ def render(source, slug):
             match = re.match(r'^(#{1,6}) (.*)', line)
             level = min(len(match[1]) + 1, 6)
             heading += 1
-            output.append(f'<h{level} id="{slug}-{heading}">{inline(match[2])}</h{level}>')
+            fragment = heading_fragment(match[2])
+            count = fragments.get(fragment, 0)
+            fragments[fragment] = count + 1
+            if count:
+                fragment += '-' + str(count)
+            alias = f'<span id="{slug}-{fragment}"></span>'
+            output.append(f'<h{level} id="{slug}-{heading}">{alias}{inline(match[2], slug)}</h{level}>')
             i += 1
         elif line.startswith('|'):
             rows = []
@@ -71,16 +90,16 @@ def render(source, slug):
                     rows.append(cells)
                 i += 1
             table = '<div class="table-wrap"><table><thead><tr>'
-            table += ''.join('<th scope="col">' + inline(c) + '</th>' for c in rows[0])
+            table += ''.join('<th scope="col">' + inline(c, slug) + '</th>' for c in rows[0])
             table += '</tr></thead><tbody>'
             for row in rows[1:]:
-                table += '<tr>' + ''.join('<td>' + inline(c) + '</td>' for c in row) + '</tr>'
+                table += '<tr>' + ''.join('<td>' + inline(c, slug) + '</td>' for c in row) + '</tr>'
             output.append(table + '</tbody></table></div>')
         elif re.fullmatch('-{3,}', line):
             output.append('<hr>')
             i += 1
         elif line.startswith('> '):
-            output.append('<blockquote>' + inline(line[2:]) + '</blockquote>')
+            output.append('<blockquote>' + inline(line[2:], slug) + '</blockquote>')
             i += 1
         elif re.match(r'^([-*] |\d+\. )', line):
             ordered = bool(re.match(r'^\d+\.', line))
@@ -88,7 +107,7 @@ def render(source, slug):
             items = []
             pattern = r'^\d+\. ' if ordered else r'^[-*] '
             while i < len(lines) and re.match(pattern, lines[i].strip()):
-                items.append('<li>' + inline(re.sub(pattern, '', lines[i].strip())) + '</li>')
+                items.append('<li>' + inline(re.sub(pattern, '', lines[i].strip()), slug) + '</li>')
                 i += 1
             output.append(f'<{tag}>' + ''.join(items) + f'</{tag}>')
         else:
@@ -97,7 +116,7 @@ def render(source, slug):
             while i < len(lines) and lines[i].strip() and not special(lines[i].strip()):
                 paragraph.append(lines[i].strip())
                 i += 1
-            output.append('<p>' + inline(' '.join(paragraph)) + '</p>')
+            output.append('<p>' + inline(' '.join(paragraph), slug) + '</p>')
     return '\n'.join(output)
 
 
