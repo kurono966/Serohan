@@ -1,5 +1,17 @@
 [
   {
+    "file": "history/README-pre-v0.9.md",
+    "line": 49,
+    "surface": "에",
+    "root": "에"
+  },
+  {
+    "file": "history/README-pre-v0.9.md",
+    "line": 49,
+    "surface": "유",
+    "root": "유"
+  },
+  {
     "file": "history/examples-pre-v0.9.md",
     "line": 3,
     "surface": "에",
@@ -202,17 +214,5 @@
     "line": 302,
     "surface": "짐",
     "root": "지"
-  },
-  {
-    "file": "history/README-pre-v0.9.md",
-    "line": 49,
-    "surface": "에",
-    "root": "에"
-  },
-  {
-    "file": "history/README-pre-v0.9.md",
-    "line": 49,
-    "surface": "유",
-    "root": "유"
   }
 ]

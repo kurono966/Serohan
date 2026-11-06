@@ -6,7 +6,8 @@ from check_grammar import ROOT, UNUSED, split
 
 def inventory():
     findings = []
-    for path in sorted((ROOT / 'history').glob('*.md')):
+    # Path ordering is case-insensitive on Windows, case-sensitive on Linux.
+    for path in sorted((ROOT / 'history').glob('*.md'), key=lambda p: p.as_posix()):
         for number, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1):
             for word in re.findall('[가-힣]', line):
                 root, _ = split(word)

@@ -117,6 +117,11 @@ class GrammarTests(unittest.TestCase):
             content = (ROOT / file).read_text(encoding='utf-8').encode('utf-8')
             self.assertEqual(hashlib.sha256(content).hexdigest(), expected, file)
 
+    def test_audit_order_is_platform_independent(self):
+        from audit_lexicon import inventory
+        files = [row['file'] for row in inventory()]
+        self.assertEqual(files, sorted(files))
+
 
 if __name__ == '__main__':
     unittest.main()
