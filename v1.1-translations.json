@@ -1,0 +1,233 @@
+[
+  {
+    "japanese": "私は言語を作る。",
+    "serohan": "나 렉 치",
+    "back_translation": "私は言語を作る",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作っていた。",
+    "serohan": "나 뤇 렗 치",
+    "back_translation": "私は言語を継続して作っていた",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は彼が言語を作ったことを知っている。",
+    "serohan": "나 틱 허 네 렋 치 혀",
+    "back_translation": "私は他者が言語を作ったことを認識する",
+    "grade": 2,
+    "reason": "文脈による参照・意味領域の限定"
+  },
+  {
+    "japanese": "それで十分です。",
+    "serohan": "가 킬",
+    "back_translation": "その対象は適切だ",
+    "grade": 2,
+    "reason": "文脈による参照・意味領域の限定"
+  },
+  {
+    "japanese": "私は言語を作れる。",
+    "serohan": "나 꿕 렉 치",
+    "back_translation": "私は言語を作れる",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作ってよい。",
+    "serohan": "나 붝 렉 치",
+    "back_translation": "私は言語を作ってよい",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作るかもしれない。",
+    "serohan": "나 퉉 렉 치",
+    "back_translation": "私は言語を作るかもしれない",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私はおそらく言語を作る。",
+    "serohan": "나 퉑 렉 치",
+    "back_translation": "私はおそらく言語を作る",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作りたい。",
+    "serohan": "나 뭑 렉 치",
+    "back_translation": "私は言語を作りたい",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作るつもりだ。",
+    "serohan": "나 뭙 렉 치",
+    "back_translation": "私は言語を作るつもりだ",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作る義務がある。",
+    "serohan": "나 붟 렉 치",
+    "back_translation": "私は言語を作る義務がある",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作ったほうがよい。",
+    "serohan": "나 쿽 렉 치",
+    "back_translation": "私は言語を作ったほうがよい",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は将来言語を作る。",
+    "serohan": "나 뤅 렉 치",
+    "back_translation": "私は将来言語を作る",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作り終える。",
+    "serohan": "나 뤑 렉 치",
+    "back_translation": "私は言語を作り終える",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は言語を作り始める。",
+    "serohan": "나 숵 렉 치",
+    "back_translation": "私は言語を作り始める",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたが作るなら私は話す。",
+    "serohan": "허 네 렉 혀 톼 나 릭",
+    "back_translation": "あなたが作るなら私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたが作る時に私は話す。",
+    "serohan": "허 네 렉 혀 솨 나 릭",
+    "back_translation": "あなたが作る時に私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたが作るので私は話す。",
+    "serohan": "허 네 렉 혀 돠 나 릭",
+    "back_translation": "あなたが作るので私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたは作るが私は話す。",
+    "serohan": "허 네 렉 혀 퐈 나 릭",
+    "back_translation": "あなたは作るが私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたが作り、その後私は話す。",
+    "serohan": "허 네 렉 혀 롸 나 릭",
+    "back_translation": "あなたが作り、その後私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたが作り、その結果私は話す。",
+    "serohan": "허 네 렉 혀 놔 나 릭",
+    "back_translation": "あなたが作り、その結果私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたが作るために私は話す。",
+    "serohan": "허 네 렉 혀 뫄 나 릭",
+    "back_translation": "あなたが作るために私は話す",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "あなたは何を作りますか。",
+    "serohan": "네 렉 훼 가 훠",
+    "back_translation": "あなたは何を作るか",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "すべての人は木を愛する。",
+    "serohan": "훤 니 멕 오",
+    "back_translation": "対象領域の全言語使用者が木を愛する",
+    "grade": 2,
+    "reason": "文脈による参照・意味領域の限定"
+  },
+  {
+    "japanese": "その木は建物より大きい。",
+    "serohan": "옴 훌 칼 제 효",
+    "back_translation": "木は建物より大きい",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は媒体を受け取って変更する。",
+    "serohan": "나 략 롸 륙 기",
+    "back_translation": "私は同じ媒体を受け取り変更する",
+    "grade": 1,
+    "reason": "構造上の意味を保持"
+  },
+  {
+    "japanese": "私は昨日これを仕上げるつもりだったが、できなかった。",
+    "serohan": null,
+    "back_translation": null,
+    "grade": 4,
+    "reason": "昨日・指示と仕上げの語義、実現失敗を能力否定に置換できない"
+  },
+  {
+    "japanese": "工場の排気ガスが大気を汚染している。",
+    "serohan": "렐 제 후 우 륧 우 포 헤",
+    "back_translation": "生成関連建物の気体が空気を悪い状態に変え続ける",
+    "grade": 3,
+    "reason": "工場・排気の特定は文脈が必要。一般の気体を排気と断定しない"
+  },
+  {
+    "japanese": "今日は彼女には会わないほうがいいですよ。",
+    "serohan": null,
+    "back_translation": null,
+    "grade": 4,
+    "reason": "今日・会うの語義と人物の特定が不足"
+  },
+  {
+    "japanese": "もし明日雨が降ったら、家にいる。",
+    "serohan": null,
+    "back_translation": null,
+    "grade": 4,
+    "reason": "明日・雨の語義と家の限定が不足"
+  },
+  {
+    "japanese": "彼は全力を尽くしたが、速いランナーには勝てないとわかった。",
+    "serohan": null,
+    "back_translation": null,
+    "grade": 4,
+    "reason": "全力、走者、勝つ、速度の尺度が未定"
+  },
+  {
+    "japanese": "私は彼女より速く移動できる。",
+    "serohan": null,
+    "back_translation": null,
+    "grade": 4,
+    "reason": "速度の尺度が未定。強い移動で速いと断定しない"
+  },
+  {
+    "japanese": "あなたは何を作ろうとしているのですか？",
+    "serohan": null,
+    "back_translation": null,
+    "grade": 4,
+    "reason": "意図と継続は組み立てられるが試行と意図の区別は未採用"
+  }
+]
