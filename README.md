@@ -60,3 +60,12 @@ Ver.0.6ではYes/No疑問文のみ追加。疑問詞・命令、数と数量、�
 [grammar-v0.6.md](grammar-v0.6.md) に暫定採用した3規則を記録：全104語根の属性形（ㄹ）による自由な複数修飾、`후` の所有・所属を含む一般的関連関係、文末 `티?` によるYes/No疑問文。否定の汎用マーカー・存在文・等値文・疑問詞などは未採用の検討事項と区別する。
 
 **注意**：`index.html` は `build.py` で生成する別ファイルです。Markdown変更時はGitHub Actions（`.github/workflows/build-docs.yml`）が `python build.py` を実行し、変更がある場合に `index.html` を自動コミットします。手動でも `python build.py` で再生成できます。
+
+## GitHub Pagesで公開する
+
+想定URL： https://kurono966.github.io/Serohan/ 
+
+初回のみGitHubの **Settings → Pages → Build and deployment** で、**Source: Deploy from a branch**、**Branch: main / (root)** を選択して保存する。公開が有効になると上記URLからWeb版を開ける。
+
+Markdownの更新時は `.github/workflows/build-docs.yml` が `index.html` を再生成し、コミットするため、公開ページにも変更が反映される。サイトはリポジトリ直下の `index.html` と `assets/` で構成され、`.nojekyll` によりJekyll変換を無効化している。
+
