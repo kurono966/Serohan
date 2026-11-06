@@ -14,5 +14,6 @@ jobs:
       - run: python translation_data.py
       - run: python verify.py
       - run: python audit_lexicon.py
+      - run: python tatoeba_analysis.py
       - run: python build.py
-      - run: git diff --exit-code -- translation-cases.json translation-report.md audit-lexemes.json index.html
+      - run: git diff --exit-code -- translation-cases.json translation-report.md audit-lexemes.json tatoeba-cases.json tatoeba-report.md index.html

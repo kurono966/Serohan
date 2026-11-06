@@ -1,0 +1,648 @@
+{
+  "retrieved_at_utc": "2026-11-06T06:05:56.735553+00:00",
+  "selection": "日本語ランダム順10ページ×各先頭6件。ID重複と8文字未満のみ除外。翻訳可能性では選別しない。",
+  "requests": [
+    {
+      "page": 1,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=1",
+      "returned_ids": [
+        9373183,
+        160967,
+        739240,
+        12065690,
+        93808,
+        78747,
+        11138362,
+        2161229,
+        10139912,
+        10134107
+      ]
+    },
+    {
+      "page": 2,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=2",
+      "returned_ids": [
+        1233778,
+        11795607,
+        10551967,
+        1964888,
+        9453658,
+        2815726,
+        10100251,
+        10565450,
+        1148414,
+        87091
+      ]
+    },
+    {
+      "page": 3,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=3",
+      "returned_ids": [
+        1075748,
+        9159084,
+        9119910,
+        1700213,
+        11065616,
+        11559533,
+        223944,
+        75535,
+        1637320,
+        10206420
+      ]
+    },
+    {
+      "page": 4,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=4",
+      "returned_ids": [
+        5404545,
+        190962,
+        9748976,
+        12593218,
+        1174670,
+        77595,
+        76052,
+        10117802,
+        2287353,
+        236137
+      ]
+    },
+    {
+      "page": 5,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=5",
+      "returned_ids": [
+        138364,
+        107935,
+        186376,
+        85431,
+        179451,
+        164403,
+        179203,
+        197498,
+        202049,
+        76220
+      ]
+    },
+    {
+      "page": 6,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=6",
+      "returned_ids": [
+        107120,
+        182227,
+        147371,
+        155213,
+        96658,
+        4886,
+        160848,
+        216614,
+        148904,
+        114503
+      ]
+    },
+    {
+      "page": 7,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=7",
+      "returned_ids": [
+        148932,
+        202186,
+        91735,
+        176812,
+        75854,
+        104381,
+        171197,
+        126223,
+        191296,
+        74111
+      ]
+    },
+    {
+      "page": 8,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=8",
+      "returned_ids": [
+        78146,
+        159936,
+        154345,
+        100164,
+        188496,
+        101271,
+        192994,
+        125653,
+        179432,
+        75721
+      ]
+    },
+    {
+      "page": 9,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=9",
+      "returned_ids": [
+        76062,
+        75634,
+        185987,
+        74914,
+        124285,
+        122096,
+        169298,
+        171239,
+        215213,
+        207080
+      ]
+    },
+    {
+      "page": 10,
+      "url": "https://tatoeba.org/en/api_v0/search?from=jpn&query=&to=und&sort=random&page=10",
+      "returned_ids": [
+        7610691,
+        11027872,
+        110820,
+        10791507,
+        11049492,
+        8692063,
+        11935864,
+        1207226,
+        2432323,
+        9971781
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": 9373183,
+      "japanese": "外に行こう。ここは騒がしすぎるよ。",
+      "url": "https://tatoeba.org/en/sentences/show/9373183",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 160967,
+      "japanese": "私はこの一年原稿を書いている。",
+      "url": "https://tatoeba.org/en/sentences/show/160967",
+      "author": "Kaede",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 739240,
+      "japanese": "頭はもう痛くないです。",
+      "url": "https://tatoeba.org/en/sentences/show/739240",
+      "author": "DeSha",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 12065690,
+      "japanese": "数学って、どうしてあんなに難しいの？",
+      "url": "https://tatoeba.org/en/sentences/show/12065690",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 93808,
+      "japanese": "彼女は、３０代になるまで子供は生まないつもりだと言っている。",
+      "url": "https://tatoeba.org/en/sentences/show/93808",
+      "author": "tommy__san",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 78747,
+      "japanese": "翌朝は眠たかったです。",
+      "url": "https://tatoeba.org/en/sentences/show/78747",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 1233778,
+      "japanese": "警察は、銃の指紋とドアに付着した指紋を照合した。",
+      "url": "https://tatoeba.org/en/sentences/show/1233778",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 11795607,
+      "japanese": "クレジットカードの番号は？",
+      "url": "https://tatoeba.org/en/sentences/show/11795607",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 10551967,
+      "japanese": "あの新しいレストラン、どう思う？",
+      "url": "https://tatoeba.org/en/sentences/show/10551967",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 1964888,
+      "japanese": "メアリーは僕のことを好きだと言ったけど、彼女のことが信じられなかった。",
+      "url": "https://tatoeba.org/en/sentences/show/1964888",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 9453658,
+      "japanese": "たくさん用事があります。",
+      "url": "https://tatoeba.org/en/sentences/show/9453658",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 2815726,
+      "japanese": "「ソ連」は「ソビエト社会主義共和国連邦」の略です。",
+      "url": "https://tatoeba.org/en/sentences/show/2815726",
+      "author": "tommy_san",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 1075748,
+      "japanese": "暑くてもへっちゃらだよ。",
+      "url": "https://tatoeba.org/en/sentences/show/1075748",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 9159084,
+      "japanese": "トムは生牡蠣が好きなんだよ。",
+      "url": "https://tatoeba.org/en/sentences/show/9159084",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 9119910,
+      "japanese": "時間があったらフランス語の勉強するんだけどな。",
+      "url": "https://tatoeba.org/en/sentences/show/9119910",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 11065616,
+      "japanese": "払わないんなら、お前の写真インターネットに載せるぞ。",
+      "url": "https://tatoeba.org/en/sentences/show/11065616",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 223944,
+      "japanese": "お金を彼にあげるくらいなら、捨てた方がましです。",
+      "url": "https://tatoeba.org/en/sentences/show/223944",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 75535,
+      "japanese": "うん。確か使ってない優待券もどこかにあったはず。",
+      "url": "https://tatoeba.org/en/sentences/show/75535",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 5404545,
+      "japanese": "トキポナが話せますか？",
+      "url": "https://tatoeba.org/en/sentences/show/5404545",
+      "author": "Raizin",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 190962,
+      "japanese": "遺失物取扱所はどこでしょうか。",
+      "url": "https://tatoeba.org/en/sentences/show/190962",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 9748976,
+      "japanese": "トムね、今日フランス語の授業サボったのよ。",
+      "url": "https://tatoeba.org/en/sentences/show/9748976",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 12593218,
+      "japanese": "一覧に追加し忘れてた。",
+      "url": "https://tatoeba.org/en/sentences/show/12593218",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 1174670,
+      "japanese": "メアリーと会ったとき、彼女は黒いセーターを着ていた。",
+      "url": "https://tatoeba.org/en/sentences/show/1174670",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 77595,
+      "japanese": "歴史はそれぞれの問題にいくつもの異なった答えを私たちに与える。",
+      "url": "https://tatoeba.org/en/sentences/show/77595",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 138364,
+      "japanese": "多くの小さな会社が倒産した。",
+      "url": "https://tatoeba.org/en/sentences/show/138364",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 107935,
+      "japanese": "彼は警察を見て駆け出した。",
+      "url": "https://tatoeba.org/en/sentences/show/107935",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 186376,
+      "japanese": "我々が自国の古い寺院を自慢に思うのは当然のことだ。",
+      "url": "https://tatoeba.org/en/sentences/show/186376",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 85431,
+      "japanese": "必要以上にお金を使わないようにしなさい。",
+      "url": "https://tatoeba.org/en/sentences/show/85431",
+      "author": "KK_kaku_",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 179451,
+      "japanese": "空には雲一つなかった。",
+      "url": "https://tatoeba.org/en/sentences/show/179451",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 164403,
+      "japanese": "私に言わせれば、彼女は少し変わっている。",
+      "url": "https://tatoeba.org/en/sentences/show/164403",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 107120,
+      "japanese": "彼は今昼食を取っているところです。",
+      "url": "https://tatoeba.org/en/sentences/show/107120",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 182227,
+      "japanese": "「地球環境のために」と言っているが、実際には「地球で生きていく人間のため」だ。",
+      "url": "https://tatoeba.org/en/sentences/show/182227",
+      "author": "sugisaki",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 147371,
+      "japanese": "助けを呼ぶ声が聞こえた。",
+      "url": "https://tatoeba.org/en/sentences/show/147371",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 155213,
+      "japanese": "私は大学に行きたい。",
+      "url": "https://tatoeba.org/en/sentences/show/155213",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 96658,
+      "japanese": "彼らは素敵なカップルである。いつもお互いに気持ちが通じあっている。",
+      "url": "https://tatoeba.org/en/sentences/show/96658",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 4886,
+      "japanese": "してもいないことをどうして謝るの？",
+      "url": "https://tatoeba.org/en/sentences/show/4886",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 148932,
+      "japanese": "車を買う前によく調べてみたほうがいい。",
+      "url": "https://tatoeba.org/en/sentences/show/148932",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 202186,
+      "japanese": "テニスやゴルフのようなスポーツは好きではない。",
+      "url": "https://tatoeba.org/en/sentences/show/202186",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 91735,
+      "japanese": "彼女はバスに遅れた。",
+      "url": "https://tatoeba.org/en/sentences/show/91735",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 176812,
+      "japanese": "君は六時に起きますか。",
+      "url": "https://tatoeba.org/en/sentences/show/176812",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 75854,
+      "japanese": "殿方が細かいことにこだわるものではありません。",
+      "url": "https://tatoeba.org/en/sentences/show/75854",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 104381,
+      "japanese": "彼は週に１回手紙をくれます。",
+      "url": "https://tatoeba.org/en/sentences/show/104381",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 78146,
+      "japanese": "旅行会社の収益が急増した。",
+      "url": "https://tatoeba.org/en/sentences/show/78146",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 159936,
+      "japanese": "私はその店で新しい帽子を買った。",
+      "url": "https://tatoeba.org/en/sentences/show/159936",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 154345,
+      "japanese": "私は彼と一緒に外出するよりもむしろ家にいたい。",
+      "url": "https://tatoeba.org/en/sentences/show/154345",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 100164,
+      "japanese": "彼は並みの学生ではない。",
+      "url": "https://tatoeba.org/en/sentences/show/100164",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 188496,
+      "japanese": "王は権力を乱用した。",
+      "url": "https://tatoeba.org/en/sentences/show/188496",
+      "author": "Ianagisacos",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 101271,
+      "japanese": "彼は肺がんで死んだ。",
+      "url": "https://tatoeba.org/en/sentences/show/101271",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 76062,
+      "japanese": "自分でもそれをやってみなさい。",
+      "url": "https://tatoeba.org/en/sentences/show/76062",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 75634,
+      "japanese": "つまり、いくつかの銃は、暴発（例えば落とされた時）を防ぐために優れた安全機構を持っていますがそうでない銃も多いのです。",
+      "url": "https://tatoeba.org/en/sentences/show/75634",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 185987,
+      "japanese": "我々はみんなのために戦った。",
+      "url": "https://tatoeba.org/en/sentences/show/185987",
+      "author": "mookeee",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 74914,
+      "japanese": "お肉の焼き加減は、いかがなさいますか？",
+      "url": "https://tatoeba.org/en/sentences/show/74914",
+      "author": "fcbond",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 124285,
+      "japanese": "東京・大阪間の距離は１０キロぐらいと聞きました。",
+      "url": "https://tatoeba.org/en/sentences/show/124285",
+      "author": "Blanka_Meduzo",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 122096,
+      "japanese": "入り口で書類を提出して下さい。",
+      "url": "https://tatoeba.org/en/sentences/show/122096",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 7610691,
+      "japanese": "僕はボストンが全然好きではない。",
+      "url": "https://tatoeba.org/en/sentences/show/7610691",
+      "author": "Ninja",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 11027872,
+      "japanese": "前も同じこと聞いたような気がする。",
+      "url": "https://tatoeba.org/en/sentences/show/11027872",
+      "author": "KK_kaku_",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 110820,
+      "japanese": "彼はまた上司にがみがみ言われたところです。",
+      "url": "https://tatoeba.org/en/sentences/show/110820",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 10791507,
+      "japanese": "犬と共に育ち、今でも犬は大好きなんですが、このところ猫派ですね。",
+      "url": "https://tatoeba.org/en/sentences/show/10791507",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 11049492,
+      "japanese": "トムはよくミスる。",
+      "url": "https://tatoeba.org/en/sentences/show/11049492",
+      "author": "small_snow",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    },
+    {
+      "id": 11935864,
+      "japanese": "この扉はどうやって開くの？",
+      "url": "https://tatoeba.org/en/sentences/show/11935864",
+      "author": "bunbuku",
+      "license": "CC BY 2.0 FR",
+      "correctness": 0
+    }
+  ]
+}
