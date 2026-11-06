@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 PAGES = [
     ('overview', '設計概要', 'overview.md'),
     ('grammar', '基本文法', 'grammar.md'),
+    ('grammar-v06', 'Ver.0.6 文法拡張', 'grammar-v0.6.md'),
     ('dictionary', '語根辞書', 'dictionary.md'),
     ('particles', '助詞', 'particles.md'),
     ('verb-inflection', '動詞活用案', 'verb-inflection.md'),
