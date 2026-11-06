@@ -9,6 +9,7 @@ PAGES = [
     ('grammar', '基本文法', 'grammar.md'),
     ('grammar-v06', 'Ver.0.6 文法拡張', 'grammar-v0.6.md'),
     ('grammar-v07', 'Ver.0.7 複合修飾', 'grammar-v0.7-compounds.md'),
+    ('grammar-v08', 'Ver.0.8 存在・所有', 'grammar-v0.8-existence.md'),
     ('dictionary', '語根辞書', 'dictionary.md'),
     ('migration', 'Ver.0.7 移行表', 'lexicon-v0.7-migration.md'),
     ('particles', '助詞', 'particles.md'),
