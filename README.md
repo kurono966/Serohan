@@ -13,7 +13,7 @@
 
 ## 読む順番とWeb版
 
-[index.html](index.html)を開くとオフラインで現行8章・歴史4章を読める。辞書検索はJavaScriptを使用し、本文は無効でも読める。
+[index.html](index.html)を開くとオフラインで現行9章・歴史4章を読める。辞書検索はJavaScriptを使用し、本文は無効でも読める。
 
 | 章 | ファイル | 内容 |
 | --- | --- | --- |
@@ -25,6 +25,7 @@
 | 6 | [verb-inflection.md](verb-inflection.md) | 7種の試験運用活用 |
 | 7 | [examples.md](examples.md) | 80語根による現行例文 |
 | 8 | [translation-report.md](translation-report.md) | 自作60件の検証 |
+| 9 | [tatoeba-report.md](tatoeba-report.md) | 外部取得60件の翻訳試行・不足分析 |
 | 歴史1 | [grammar-v0.6.md](grammar-v0.6.md) | 暫定採用の記録 |
 | 歴史2 | [grammar-v0.7-compounds.md](grammar-v0.7-compounds.md) | 複数修飾・후右結合 |
 | 歴史3 | [grammar-v0.8-existence.md](grammar-v0.8-existence.md) | 存在・所在所有・照応 |
@@ -41,11 +42,14 @@ python -m unittest discover -s tests -v
 python translation_data.py
 python verify.py
 python audit_lexicon.py
+python tatoeba_analysis.py
 python build.py
 python check_grammar.py 나 퍄 멚 오
 ```
 
 Python 3.10以降の標準ライブラリだけで実行できる。`parsed`は部分文法内の解析成功であり、翻訳精度や言語全体の正当性の証明ではない。テストはCIでも実行する。
+
+Tatoeba実例は`tatoeba-source.json`にID・原文・投稿者・ライセンス付きで保存。ランダム標本のため再取得結果は変わる。`fetch_tatoeba.py`は手動のネットワーク取得用で、CIは保存標本を使う。自作60件と混ぜず、部分訳・不能・意味を変える却下候補を区別する。
 
 ## 保存資料
 

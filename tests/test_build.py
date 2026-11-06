@@ -26,7 +26,7 @@ class BuildTests(unittest.TestCase):
         html = (ROOT / 'index.html').read_text(encoding='utf-8')
         parser = DocumentLinks()
         parser.feed(html)
-        self.assertEqual(len(build.PAGES), 12)
+        self.assertEqual(len(build.PAGES), 13)
         self.assertEqual(len(parser.ids), len(set(parser.ids)))
         self.assertFalse(set(parser.targets) - set(parser.ids))
         self.assertIn('Ver.0.9', html)
@@ -46,6 +46,17 @@ class BuildTests(unittest.TestCase):
             for target in re.findall(r'\[[^]]+\]\(([^)]+)\)', path.read_text(encoding='utf-8')):
                 if not re.match(r'(https?://|#)', target):
                     self.assertTrue((path.parent / target).exists(), (path.name, target))
+
+    def test_local_heading_links_support_japanese_and_repeated_headings(self):
+        source = '[参照](#ver10-意味領域ガイド80語根試験運用)\n\n' + (
+            '# Ver.1.0 意味領域ガイド（80語根・試験運用）\n\n' * 2)
+        parser = DocumentLinks()
+        parser.feed(build.render(source, 'dictionary'))
+        target = 'dictionary-ver10-意味領域ガイド80語根試験運用'
+        self.assertIn(target, parser.targets)
+        self.assertIn(target, parser.ids)
+        self.assertIn(target + '-1', parser.ids)
+        self.assertEqual(len(parser.ids), len(set(parser.ids)))
 
 
 if __name__ == '__main__':

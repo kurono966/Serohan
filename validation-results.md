@@ -32,3 +32,20 @@
 | 改訂前本文の原文保存 | history/README-pre-v0.9.md、history/overview-pre-v0.9.md、history/grammar-pre-v0.9.md、history/particles-pre-v0.9.md、history/verb-inflection-pre-v0.9.md、history/examples-pre-v0.9.md |
 
 辞書と0.6～0.8の語義・採用履歴を勝手に置き換えず、Ver.0.9の差分で現在の適用範囲を明示する。PRはmain向けに作成し、mainへ直接反映しない。
+
+## Tatoeba実例検証の追加
+
+ブランチ`analysis/tatoeba-stress`、追加作業の開始点`481612a`。上の19テスト・外部0件・12章は初回Ver.0.9整理時の結果。今回、Tatoeba公開APIから実例60件を取得し、自作標本と分離して検証した。現行mainに追加されていた意味領域ガイド・過去助動詞・結果状態への헤も参照し、これらの変更を保持した。
+
+- 外部実例60件：全文保持0、部分10、今回忠実な全文訳を構成できなかったもの50。全例にID・原文・投稿者・ライセンス・問題・不足概念を記録。
+- `python -m unittest discover -s tests -v`：26テスト成功。元の19件に、実例標本と意味評価の整合6件、章内アンカーの回帰1件を追加。
+- `python tatoeba_analysis.py`と`python build.py`成功。Web版は現行9章・歴史4章の計13章。
+- 辞書に追加済みだった日本語見出しへの内部リンクがWeb生成では切れていたため、章ごとの見出しアンカーを生成する処理を補い、同名見出しの衝突もテスト。
+- 外部のランダム再取得はCIで行わず、保存標本からの分析・JSON・Markdown・HTML再生成を検証。
+
+| 追加変更の種類 | ファイル |
+| --- | --- |
+| 取得手順・原文 | fetch_tatoeba.py、tatoeba-source.json |
+| 原文別評価・報告 | tatoeba_analysis.py、tatoeba-cases.json、tatoeba-report.md |
+| 自動検証 | tests/test_tatoeba.py、tests/test_build.py、.github/workflows/verify.yml |
+| 案内・生成・履歴追記 | README.md、build.py、index.html、audit-v0.9.md、validation-results.md |
