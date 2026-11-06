@@ -1,241 +1,84 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="ハングル一音節に、概念と役割を。人工言語セロハン語の文法・80語根・例文を読むための資料サイト。"><title>Serohan — セロハン語</title><link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#main">本文へ移動</a><header class="topbar"><a class="brand" href="#home">세로한 <span>SEROHAN</span></a><span class="edition">LANGUAGE NOTES · 2026</span></header>
-<div class="layout"><aside><nav aria-label="章ナビゲーション"><a class="home-link" href="#home">はじめに</a><a href="#overview"><span>01</span>設計概要</a><a href="#grammar"><span>02</span>基本文法</a><a href="#grammar-v06"><span>03</span>Ver.0.6 文法拡張</a><a href="#grammar-v07"><span>04</span>Ver.0.7 複合修飾</a><a href="#grammar-v08"><span>05</span>Ver.0.8 存在・所有</a><a href="#dictionary"><span>06</span>語根辞書</a><a href="#migration"><span>07</span>Ver.0.7 移行表</a><a href="#particles"><span>08</span>助詞</a><a href="#verb-inflection"><span>09</span>動詞活用案</a><a href="#examples"><span>010</span>例文集</a></nav><div class="sidebar-note">概念 → 役割 → 関係<br>小さな規則で、豊かな表現を。</div></aside>
-<main id="main"><section id="home" class="hero"><div class="eyebrow">A CONSTRUCTED LANGUAGE</div><h1>一音節から、<br>広がることば。</h1><p class="intro">ハングルの構造から生まれた人工言語、セロハン語。<br>一つの概念に終声を添えて、表現のかたちを変える。</p><div class="word-study"><div><b lang="ko">메</b><span>概念 / 愛</span></div><span class="arrow" aria-hidden="true">→</span><div><b lang="ko">멕</b><span>行為 / 愛する</span></div><span class="arrow" aria-hidden="true">→</span><div><b lang="ko">멥</b><span>修飾 / 愛をもって</span></div></div><div class="hero-bottom"><a class="button" href="#grammar">基本文法から読む <span aria-hidden="true">↗</span></a><p>80 語根 <span> / </span> 5 基本助詞 <span> / </span> SVO 語順</p></div><p class="scope">基本体系と活用の試案を収録。未定の規則は各章に明記しています。</p></section><section class="chapter" id="overview" aria-label="設計概要"><div class="chapter-label">SEROHAN / 設計概要</div><blockquote><strong>Ver.0.7 語彙に関する注記</strong>：この概要は旧104語根体系の例示を含みます。現在の圧縮案は <a href="#dictionary">dictionary.md</a>（80使用・24未使用）、詳細は <a href="#migration">lexicon-v0.7-migration.md</a> を参照してください。母音の再設計は未確定です。</blockquote>
-<h2 id="overview-1">セロハン語（Serohan）設計概要 Ver.0.5</h2>
-<h3 id="overview-2">概要</h3>
-<p><strong>セロハン語（Serohan）</strong>は、人工言語「セロ語」から分離・発展した姉妹言語である。</p>
-<p>セロ語の語彙や世界観を受け継ぎながらも、<strong>ハングルの構造を前提として一から再設計された独立言語</strong>である。</p>
-<p>単なるハングル表記版ではなく、「ハングルだからこそ成立する文法」を目指して設計されている。</p>
-<hr>
-<h2 id="overview-3">設計理念</h2>
-<p>セロハン語は以下の思想を持つ。</p>
-<ul><li>ハングルを最大限活用する</li><li>一文字あたりの情報量を高める</li><li>規則性を最優先する</li><li>例外を極力排除する</li><li>ミニマルな文法を目指す</li><li>語順を積極的に文法要素として利用する</li><li>必要最低限のみ助詞・助辞を用いる</li></ul>
-<hr>
-<h2 id="overview-4">文字体系</h2>
-<p>使用文字は現代ハングル。</p>
-<p>韓国語の発音規則（連音化・終声中和など）は採用せず、<strong>表記どおりに読む</strong>。</p>
-<hr>
-<h2 id="overview-5">母音</h2>
-<p>基本母音は5つ。辞書では派生母音ㅑ・ㅛ・ㅠも採用する。ㅘ・ㅝ・ㅟ・ㅞは意味領域のみを予約しており、語根は未割り当て。</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">母音</th><th scope="col">発音</th></tr></thead><tbody><tr><td>ㅏ</td><td>/a/</td></tr><tr><td>ㅔ</td><td>/e/</td></tr><tr><td>ㅣ</td><td>/i/</td></tr><tr><td>ㅗ</td><td>/o/</td></tr><tr><td>ㅜ</td><td>/u/</td></tr></tbody></table></div>
-<p>日本語話者にも発音しやすい体系とし、ㅓ・ㅡは採用しない。ㅝは独立した /wo/ として予約し、ㅓ単独の採用を意味しない。</p>
-<hr>
-<h2 id="overview-6">語根</h2>
-<p>すべての語根は</p>
-<blockquote><strong>CV（初声＋母音。初声ㅇは無音）</strong></blockquote>
-<p>で構成される。</p>
-<p>語根は<strong>品詞を持たず、「概念」そのもの</strong>を表す。</p>
-<p>例</p>
-<ul><li>메　愛</li><li>에　海</li><li>아　山</li><li>오　木</li><li>나　私</li></ul>
-<p>※Ver.0.2までは「아＝森」としていたが、dictionary.md（正式な語根辞書）では「아＝山」「요＝森」と定義されているため、Ver.0.3でdictionary.mdに合わせて修正した。</p>
-<hr>
-<h2 id="overview-7">終声（パッチム）</h2>
-<p>終声は</p>
-<blockquote><strong>概念をどのような役割で用いるか</strong></blockquote>
-<p>を表す。</p>
-<p>終声は助詞ではなく、<strong>語そのものの性質を決定する</strong>。</p>
-<h3 id="overview-8">単パッチム</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">終声</th><th scope="col">意味</th></tr></thead><tbody><tr><td>∅</td><td>概念</td></tr><tr><td>ㄱ</td><td>行為（動詞）</td></tr><tr><td>ㄹ</td><td>属性（形容詞）</td></tr><tr><td>ㅂ</td><td>修飾</td></tr><tr><td>ㅁ</td><td>実体（個体化）</td></tr></tbody></table></div>
-<h4 id="overview-9">実体（ㅁ）</h4>
-<p>∅（無終声）が表すのは、その語根が指す領域全体を包括する<strong>抽象的な概念</strong>である。</p>
-<p>一方ㅁは、その概念を</p>
-<blockquote><strong>具体的・物理的な一個の実体として切り出したもの</strong></blockquote>
-<p>を表す。「名詞化」というよりは<strong>個体化（インスタンス化）</strong>に近い機能であり、名詞語根に限らずどの分野の語根にも適用できる。</p>
-<p>例</p>
-<ul><li>오　木（という概念・木性）　→　옴　（目の前の）一本の木</li><li>카　大きい（という性質）　→　캄　大きいもの・大物</li><li>레　作成（という行為）　→　렘　作られたもの・作品</li></ul>
-<h5 id="overview-10">人称代名詞における実体（ㅁ）</h5>
-<p>人称代名詞（나・네など）も同じ原理に従う。</p>
-<ul><li><strong>∅（無終声）</strong> → その人の<strong>心・人格</strong>を指す</li><li><strong>ㅁ（実体）</strong> → その人の<strong>肉体・身体</strong>を指す</li></ul>
-<p>例</p>
-<ul><li>나　私（心・人格としての私）</li><li>남　私の体（肉体としての私）</li></ul>
-<p>この対立により、たとえば「傷つける」のような動詞の目的語をどちらにするかで、</p>
-<ul><li>남を傷つける　→　身体的に傷つける</li><li>나を傷つける　→　心を傷つける</li></ul>
-<p>という意味の切り分けが可能になる。これは終声ㅁが<strong>「概念⇄実体」という単一の一貫したルールから自然に導かれる</strong>副産物であり、人称代名詞のための特別な例外規定ではない。</p>
-<h4 id="overview-11">修飾（ㅂ）</h4>
-<p>修飾は従来の副詞より広い概念であり、</p>
-<ul><li>方法</li><li>様態</li><li>時間</li><li>場所</li><li>程度</li></ul>
-<p>などを包括する。</p>
-<p>例</p>
-<ul><li>멥　愛をもって</li><li>엡　海のように</li><li>압　山に関して</li></ul>
-<p>※「海で」「山へ」のような格関係は表さず、概念を修飾的に扱う語となる。</p>
-<hr>
-<h2 id="overview-12">ダブルパッチム</h2>
-<p>ダブルパッチムは</p>
-<blockquote><strong>動詞（ㄱ）にのみ付与できる。</strong></blockquote>
-<p>単語の活用を表す。</p>
-<h3 id="overview-13">現在予定している役割</h3>
-<h4 id="overview-14">時制</h4>
-<ul><li>過去</li><li>未来</li></ul>
-<h4 id="overview-15">法（モダリティ）</h4>
-<ul><li>願望</li><li>義務</li><li>推量</li><li>否定</li></ul>
-<h4 id="overview-16">アスペクト</h4>
-<ul><li>完了</li><li>継続</li><li>結果状態</li></ul>
-<p>現行案の割り当ては <a href="#verb-inflection">verb-inflection.md</a> にまとめる。初版では一語につき一種類とし、時制・否定・相の重ね合わせは未定とする。</p>
-<hr>
-<h2 id="overview-17">文法</h2>
-<p>基本語順は</p>
-<blockquote><strong>SVO</strong></blockquote>
-<p>を採用する。</p>
-<p>語順そのものを重要な文法要素として利用し、助詞への依存を減らす。</p>
-<hr>
-<h2 id="overview-18">助詞・助辞</h2>
-<p>助詞は終声では表さない。</p>
-<p>終声は語形成専用とし、</p>
-<p>語と語の関係は<strong>独立したㅎ系列CV助詞</strong>で表現する。採用済みの5語と予約語を <a href="#particles">particles.md</a> で区別する。</p>
-<p>対象となる文法関係は、</p>
-<ul><li>～へ</li><li>～から</li><li>～で</li><li>～の</li><li>～と</li></ul>
-<p>など。</p>
-<p>これにより</p>
-<ul><li>終声＝語の内部変化</li><li>助詞＝語同士の関係</li></ul>
-<p>という役割分担を明確にする。</p>
-<hr>
-<h2 id="overview-19">語彙設計</h2>
-<p>語根は単なる音の割り当てではなく、</p>
-<p><strong>CV自体に意味を持たせる</strong>ことを目標としている。</p>
-<p>最終的には</p>
-<blockquote>子音 × 母音</blockquote>
-<p>の組み合わせを見るだけで、</p>
-<p>ある程度意味領域が推測できる辞書を構築する予定である。</p>
-<hr>
-<h2 id="overview-20">セロ語との関係</h2>
-<p>セロ語から派生した言語であるため、</p>
-<p>既存語彙は可能な限り継承する。</p>
-<p>初期段階では</p>
-<blockquote><strong>セロ語の語尾子音を削除し、CVへ変換</strong></blockquote>
-<p>することを基本方針とし、</p>
-<p>重複する語のみ再設計する。</p>
-<hr>
-<h2 id="overview-21">設計思想</h2>
-<p>セロハン語は</p>
-<blockquote><strong>「一文字＝一つの概念」</strong></blockquote>
-<p>を基本単位とする。</p>
-<p>さらに</p>
-<blockquote><strong>終声によって概念の役割を切り替える</strong></blockquote>
-<p>ことで、一文字の情報量を最大化する。</p>
-<p>文法は</p>
-<ul><li>語順</li><li>終声</li><li>最小限の助詞</li></ul>
-<p>のみで構成される。</p>
-<p>複雑な活用や大量の語尾変化を持たない、規則的でミニマルな人工言語を目指す。</p></section><section class="chapter" id="grammar" aria-label="基本文法"><div class="chapter-label">SEROHAN / 基本文法</div><h2 id="grammar-1">セロハン語 基本文法 Ver.0.8（基礎規則＋拡張参照）</h2>
-<p>Ver.0.8の存在・所在所有・限定的照応については <a href="#grammar-v08">新仕様</a> を参照。節接続の新用法は未採用。</p>
-<p>既存資料の共通部分を整理し、例文を読むための運用規則を明示する。動詞の細かな意味や未定の構文は、今後の設計対象とする。</p>
-<h3 id="grammar-2">語と表記</h3>
-<p>一語根はハングル一音節。初声ㅇは無音で、아は /a/。単語間には空白を置き、文は句点または改行で区切る。語根に終声を付けるときは同じ音節内に合成する。</p>
-<p>基本母音はa・e・i・o・u、採用済み派生母音はya・yo・yu。子音の転写は辞書に従い、終声はㄱ=k、ㄹ=l、ㅂ=b、ㅁ=m。初声ㄹ=rと終声ㄹ=lを区別する。複合終声は構成順にgs・lg・lb・nh・lt・lh・bsと転写する。</p>
-<p>韓国語の音変化を適用せず、終声は構成する子音を順に読む。発音が難しい場合の補助母音や音声上の細則は未定で、転写と綴りは変えない。</p>
-<h3 id="grammar-3">文と名詞句</h3>
-<pre><code>主語 + 述語 + （目的語） + （格助詞句）
-나 멕 네                     私はあなたを愛する。
-나 록 에 헤                  私は海へ行く。
-나 록 오 에 헤               私は木を海へ動かす。</code></pre>
-<p>目的語を省いた文は、対象を限定しない行為を表す。移動록は、目的語なしでは主語の移動、目的語ありでは対象を移動させる意味で用いる。ほかの派生動詞の意味を、この一例だけから一律に決めない。</p>
-<p>無終声の語根も主語・目的語になれる。ㅁは名詞にする必須標識ではなく、具体的な実体を取り出す標識。人称語根나・네は人格を指し、남・넴は身体を指す。네は会話では「あなた」、文脈によって「その人」。</p>
-<h3 id="grammar-4">属性と修飾</h3>
-<p>属性語（ㄹ）は主語に続けると述語になる。連体修飾では名詞句の直前に置く。Ver.0.6ではすべての語根を属性形（ㄹ）にでき、名詞句に複数の属性形を置ける。Ver.0.6の並列属性規則は維持。複数の属性形は並列修飾し、<code>후</code> の連続は右結合で一意に解釈する。詳細は <a href="#grammar-v07">Ver.0.7 複合修飾仕様</a> を参照。</p>
-<pre><code>옴 칼                       その木は大きい。
-칼 옴                       大きな木。
-나 멕 칼 옴                 私は大きな木を愛する。</code></pre>
-<p>ㅂの修飾語は述語の直前に置き、その行為の様態を表す。場所・方向・道具などの格関係には助詞を使う。</p>
-<pre><code>나 몹 렉                    私は喜んで作る。
-나 렉 다 히                 私は手で作る。</code></pre>
-<h3 id="grammar-5">助詞句のまとまり</h3>
-<p>헤・히・호は名詞句の後に付き、句全体は目的語の後に置く。目的語がなければ述語の後に置く。複数の格助詞句は順に並べる。</p>
-<p>하は二つの名詞句を結ぶ。후は「関連元 후 対象」で一つの名詞句を作る。所有・所属はその解釈の一つである。후だけで句や文を終えない。Ver.0.7では修飾された単純名詞句も후の左側に置ける。후が複数ある場合は必ず右結合し、角括弧による無音の構文区切りは用いない。左結合は現行構文で表せない。複数の하による曖昧な連結は引き続き保留。</p>
-<pre><code>나 하 네 록 에 헤           私とあなたは海へ行く。
-나 략 네 후 자              私はあなたの道具を受け取る。
-나 렉 네 후 오 히           私はあなたの木を使って作る。</code></pre>
-<p>最後の例では「네 후 오」全体が히の対象となる。히の場所／手段の区別は文脈による。この曖昧さは現行の5助詞体系に残る。</p>
-<h3 id="grammar-6">活用案と未定事項</h3>
-<p>複合終声はㄱに追加せず、語根の終声位置に置き換える。一語には一つだけ使う。無標のㄱは時制を指定せず、現在・習慣などを文脈から読む。未来は予測の確実性を保証せず、完了は過去時制と同義ではない。</p>
-<p>現行案では過去と否定などを同時に標示できない。重ね合わせ、否定の作用域、疑問詞、命令、関係節、左結合の言い換え、名詞句境界の音声的明示方法、複合語の固定語義は未定とする。Yes/No疑問は文末ティにより作る（<a href="#grammar-v06">Ver.0.6 拡張仕様</a>）。</p>
-<h3 id="grammar-7">Ver.0.6 の最小追加規則</h3>
-<ul><li><strong>属性形</strong>：任意の語根を <code>ㄹ</code> で属性化し、中心語の前に複数並べられる。例：<code>콜 켈 짐</code>（新しく小さい本）。</li><li><strong>후</strong>：所有だけでなく関連関係全般を表す。例：<code>추 후 잠</code>（知識に関する道具）。</li><li><strong>疑問</strong>：平叙文の文末に <code>티?</code> を置き、文全体の真偽を尋ねる。例：<code>네 멕 나 티?</code>。通常の語根 <code>티</code> と同形のため、曖昧性は残る。</li></ul>
-<p>結合範囲、例外、未確定事項は <a href="#grammar-v06">grammar-v0.6.md</a> を正本として参照。</p>
-<h3 id="grammar-8">Ver.0.7 複合修飾と右結合（試験採用）</h3>
-<ul><li>複数のㄹ属性形は従来どおり同じ中心語にかかる：<code>살 툘 차</code>（時間的で秩序だった音）。</li><li><code>후</code> の左側に修飾済みの単純名詞句を置ける：<code>살 툘 차 후 기</code>。</li><li><code>후</code> が連続する場合は<strong>必ず右結合</strong>：<code>나 후 기 후 제</code> は「私に関係する、情報媒体に関連する建物」と読む。</li><li>発音できない <code>[ ]</code> を文法記号として使う規則は廃止。左結合を必要とする意味は当面別の文で説明し、照応の文法は将来検討する。</li><li>使用語根は <a href="#dictionary">Ver.0.7辞書</a> の80語根に限定。</li></ul>
-<p>詳細は <a href="#grammar-v07">grammar-v0.7-compounds.md</a>。</p></section><section class="chapter" id="grammar-v06" aria-label="Ver.0.6 文法拡張"><div class="chapter-label">SEROHAN / Ver.0.6 文法拡張</div><blockquote><strong>新版への案内</strong>：この文書はVer.0.6当時の仕様を保存したものです。名詞句の左側修飾と <code>후</code> の連続は <a href="#grammar-v07">Ver.0.7 複合修飾仕様</a> で拡張・右結合に統一されています。Ver.0.7では角括弧による無音のスコープ区切りは採用しません。Ver.0.7の使用語根は80、未使用枠は24です。</blockquote>
-<h2 id="grammar-v06-1">セロハン語 Ver.0.6 文法拡張仕様（暫定採用）</h2>
-<p>更新日：2026-11-06</p>
-<p>この文書はVer.0.5を補足し、ユーザーが選択した3つの設計方針をVer.0.6の採用規則として記録する。104語根、SVO語順、CV語根と終声の五機能（∅概念・ㄱ行為・ㄹ属性・ㅂ修飾・ㅁ実体）は変更しない。未決定部分を推測で確定しない。</p>
-<h3 id="grammar-v06-2">1. 全語根の属性化（採用）</h3>
-<p>任意の辞書収録CV語根 X から、終声ㄹによる属性形 Xㄹ を生成できる。意味は「Xに関連する性質を持つ」とし、具体的な関連性は文脈で決める。辞書に個別の派生語登録は必須ではない。</p>
-<p>属性形は中心語の<strong>前</strong>に置く。複数の属性形を連続使用でき、そのすべてが最後の中心語に直接かかる。順序は基本的に意味の階層を作らない。</p>
-<ul><li><code>출 잠</code>：知識に関する道具（知識＋属性化、道具＋個体化）</li><li><code>콜 켈 짐</code>：新しく小さい本（両属性が本を修飾）</li><li><code>옴 칼.</code>：その木は大きい（従来どおり属性の述語用法）</li></ul>
-<p><code>ㅂ</code> 形は引き続き動詞などの様態修飾を担い、<code>ㄹ</code> 形の名詞句修飾と区別する。これらの語の意味は文脈次第であり、上記訳を固定した語義としない。</p>
-<h3 id="grammar-v06-3">2. 후 の一般的関連関係（採用）</h3>
-<p><code>A 후 B</code> は「Aに関連するB」を表す名詞句である。所有・所属はその具体的な解釈として含まれる。<code>후</code> 自体は所有か主題かを区別しない。</p>
-<ul><li><code>나 후 짐</code>：私に関係する本／私の本</li><li><code>추 후 잠</code>：知識に関連する道具</li><li><code>보 후 님</code>：村に関係する人</li></ul>
-<p>初版では結合範囲を限定する。</p>
-<ul><li><code>A</code> は原則として単独の概念語（終声なし）または実体語（ㅁ）。</li><li><code>B</code> は <code>属性形* + 中心語</code> の名詞句。</li><li><code>나 후 콜 짐</code> は <code>[나 후 [콜 짐]]</code> と解析する。</li><li><code>후</code> の入れ子、左側の複合名詞句、長い並列構文との組み合わせは保留。</li></ul>
-<p><code>출 잠</code>（道具の属性）と <code>추 후 잠</code>（知識との関連関係）は同じ表現として扱わないが、実際の指示対象は重なり得る。</p>
-<h3 id="grammar-v06-4">3. 文末 티 のYes/No疑問（採用）</h3>
-<p>独立した平叙文の最後に無終声の <code>티</code> を置くと、その文全体の真偽を尋ねるYes/No疑問になる。書き言葉では直後に <code>?</code> を付す。</p>
-<ul><li><code>네 멕 나.</code> → <code>네 멕 나 티?</code>：あなたは私を愛しますか？</li><li><code>옴 칼.</code> → <code>옴 칼 티?</code>：その木は大きいですか？</li><li><code>나 멕 티.</code> → <code>나 멕 티 티?</code>：私は「知」という概念を愛しますか？</li></ul>
-<p>既存語根 <code>티</code>（知）と文法用法 <code>티</code> は同形。疑問マーカーは文末専用とするが、音声での境界衝突や、名詞が末尾にあるときの完全な曖昧性解消は未確定。Yes/No以外の「何・誰・どこ」などの疑問詞はこの仕様では導入しない。</p>
-<h3 id="grammar-v06-5">4. 部分文法（適用可能な範囲）</h3>
-<p>以下は全構文を定義する完全なEBNFではなく、今回追加した名詞句と疑問文の範囲を示す。</p>
-<pre><code>語根         := 辞書に収録したCV
-概念語       := 語根
-実体語       := 語根＋ㅁ
-属性形       := 語根＋ㄹ
-中心語       := 概念語 | 実体語
-単純名詞句   := 属性形* 中心語
-名詞句       := 単純名詞句 | (概念語 | 実体語) 후 単純名詞句
-疑問文       := 完結した平叙文 티 ?</code></pre>
-<p>文の基本語順は引き続き SVO。目的語のない動詞文、属性述語文、既存の格助詞句も引き続き使用できる。完全な構文解析では、述語と名詞句の境界の形式化が課題として残る。</p>
-<h3 id="grammar-v06-6">5. 採用していない追加提案</h3>
-<p>次の項目は以前の検討で挙がったが、今回選択された3項目には含まれないため、<strong>採用済みとして扱わない</strong>。</p>
-<ul><li><code>퍄</code> を全述語の前に置く否定マーカーとする案（現行の動詞否定活用 <code>ㄶ</code> は維持）</li><li><code>각</code> を存在動詞とする案</li><li><code>A B</code> 型の等値文</li><li>概念語 <code>가</code> の照応指示詞としての用法</li><li>通常の概念語を疑問詞に転用する案</li><li>3項目以上の並列、修飾の入れ子、関係節、従属節</li><li>時制・否定・相の活用の重ね合わせ</li></ul>
-<h3 id="grammar-v06-7">6. 今後の検証事項</h3>
-<ol><li>複数の属性形と述語の境界を一意に解析できるか。</li><li><code>후</code> の広い意味と、名詞句の入れ子制限が実用上十分か。</li><li>文末 <code>티</code> が概念語 <code>티</code> と衝突する場合の音声規則。</li><li>指示・否定・等値・疑問詞をどう最小の語彙で実現するか。</li></ol>
-<p>以上の未解決項目は、確定したものとして例文や辞書に混入させない。</p></section><section class="chapter" id="grammar-v07" aria-label="Ver.0.7 複合修飾"><div class="chapter-label">SEROHAN / Ver.0.7 複合修飾</div><h2 id="grammar-v07-1">セロハン語 Ver.0.7 複合修飾と音声で解釈できる関連句（試験採用）</h2>
-<p>更新日：2026-11-06</p>
-<p>この文書は <a href="#grammar-v06">Ver.0.6</a> の複数属性修飾と後置助詞 <code>후</code> の範囲を拡張する。<strong>同じ音列が書記上の括弧の有無だけで別の文法構造にならない</strong>ことを優先する。語根は <a href="#dictionary">Ver.0.7辞書</a> の使用80語根のみで、未使用24枠の派生語は作らない。SVO、語根と終声の五機能、文末疑問 <code>티</code> は変更しない。</p>
-<h3 id="grammar-v07-2">1. 複数の属性形は並列修飾</h3>
-<p>連続した属性形（語根＋ㄹ）は、すべて後続の中心語を直接修飾する。並べる順番だけでは属性間の階層を作らない。</p>
-<ul><li><code>콜 켈 기</code>：新しく小さい情報媒体</li><li><code>살 툘 차</code>：時間に関わり秩序をもつ音（音楽・リズムなどの候補）</li><li><code>몰 툘 라</code>：喜びに関わり秩序をもつ活動（ゲーム・遊びなどの候補）</li></ul>
-<p>これらの日本語訳は説明のための意味候補であり、特定の日本語の名詞を確定させるものではない。</p>
-<h3 id="grammar-v07-3">2. 후 による関連付けは必ず右結合</h3>
-<p><code>후</code> を続けたとき、<strong>右側の関連句が先にまとまる</strong>（右結合）。書記と発話で同じ順序・同じ構造になる。</p>
-<ul><li><code>나 후 기</code>：私に関連する情報媒体</li><li><code>나 후 콜 기</code>：私に関連する新しい情報媒体</li><li><code>나 후 기 후 제</code>：私に関連する「情報媒体に関連する建物」</li><li><code>살 툘 차 후 기</code>：時間的に秩序だった音に関連する情報媒体</li><li><code>나 후 살 툘 차 후 기</code>：私に関連する「時間的に秩序だった音に関連する情報媒体」</li></ul>
-<p>例 <code>A 후 B 후 C</code> は常に <code>A 후 (B 후 C)</code> と解釈する。後者の丸括弧は<strong>解説専用のメタ表記</strong>であり、正式な文には書かず、読み上げもしない。</p>
-<p><code>후</code> の左側には単純名詞句（<code>属性形* + 中心語</code>）を使える。右側には単純名詞句または右結合の関連句を使える。<code>후</code> は所有、内容、材料、目的、所属などの関係を個別に区別しない。</p>
-<h3 id="grammar-v07-4">3. 左結合が必要な場合</h3>
-<p><code>(A 후 B) 후 C</code> のような<strong>左結合を、発音できない角括弧で表す規則は廃止</strong>する。Ver.0.7ではその構造を一つの名詞句として符号化できない。</p>
-<ul><li><code>나 후 기 후 제</code> を「『私の情報媒体』に関係する建物」の意味に読むことは<strong>できない</strong>。右結合の解釈だけを採る。</li><li>左結合に相当する意味を伝えたい場合は、当面<strong>短い複数の文に分けて説明</strong>する。ただし「それ」「これは」などの照応方法や、名詞句同士の等値文は未確定なので、正式な例文を勝手に作らない。</li><li>将来必要なら、発音可能な境界標識や照応表現を別途設計する。現時点では追加しない。</li></ul>
-<h3 id="grammar-v07-5">4. 名詞句の部分文法</h3>
-<p>以下の文法は名詞句内の <code>후</code> の結合方向に限る。書き言葉での角括弧・丸括弧は構文に含まない。</p>
-<pre><code>語根          := Ver.0.7辞書で「使用」のCV
-属性形        := 語根 + ㄹ
-中心語        := 語根 | 語根 + ㅁ
-単純名詞句    := 属性形* 中心語
-名詞句        := 単純名詞句 (후 名詞句)?</code></pre>
-<p>右再帰により <code>A 후 B 후 C</code> は必ず <code>A 후 (B 후 C)</code> に相当する構造となる。名詞句の終端、述語との境界、他の助詞との組み合わせまで完全に解析できると主張するものではない。</p>
-<h3 id="grammar-v07-6">5. 文の使用例</h3>
-<ul><li><code>네 렉 몰 툘 라.</code>：あなたは喜びに関連し秩序のある活動を作る（ゲーム制作などの解釈候補）。</li><li><code>네 렉 몰 툘 라 후 기.</code>：あなたはゲーム的な活動に関連する情報媒体を作る。</li><li><code>나 멕 살 툘 차 후 기.</code>：私は音楽的な音に関連する情報媒体を好む。</li></ul>
-<p>上記はいずれも <strong>使用80語根のみ</strong>から組み立てた説明例であり、「ゲーム」「音楽」等の固定語義を新設しない。</p>
-<h3 id="grammar-v07-7">6. 音声と書記の原則・未解決課題</h3>
-<ol><li><strong>必須の文法的区別は音声でも伝えられること</strong>。発音できない括弧に文法上の意味を持たせない。</li><li>複数属性形は並列、<code>후</code> は右結合という規則を共有することで、構文上の結合方向を統一する。</li><li>文脈による意味の曖昧さ（所有か内容かなど）は残る。これは結合構造の曖昧さとは別問題。</li><li>長い句の聞き取りやすさ、自然な休止、照応、左結合の言い換え、属性述語と名詞句の境界は今後検証する。</li><li>新たな助詞・関係節・等値文・発音可能な区切りマーカーは、この改訂では採用しない。</li></ol>
-<p>この文書は <a href="#grammar-v06">Ver.0.6仕様</a> に優先する、Ver.0.7の最新の複合修飾規則とする。</p></section><section class="chapter" id="grammar-v08" aria-label="Ver.0.8 存在・所有"><div class="chapter-label">SEROHAN / Ver.0.8 存在・所有</div><h2 id="grammar-v08-1">セロハン語 Ver.0.8 存在・所有・照応（試験採用）</h2>
-<p>Ver.0.7の80語根、SVO、修飾と後置助詞の右結合を維持する。新しい語根・助詞は増やさず、発音できない記号に文法上の役割を与えない。</p>
-<h3 id="grammar-v08-2">存在動詞</h3>
-<p>既存語根 <code>가</code>（物・対象）から、<code>ㄱ</code>終声の動詞形<code>각</code>を「存在する・ある・いる」として採用する。</p>
-<ul><li><code>옴 각.</code>：木が存在する。</li><li><code>기 각 제 히.</code>：情報媒体が建物にある。</li><li><code>네 각 소 히.</code>：あなたはその場所にいる。</li></ul>
-<p>構文：<code>存在主体 각 (所在先 히)</code>。存在主体が主語であり、<code>히</code>句は場所・関係先。</p>
-<h3 id="grammar-v08-3">所在を用いる所有</h3>
-<p><code>X 각 Y 히</code>は「YのところにXがある」。文脈によって「YがXを持つ」と解釈する。</p>
-<ul><li><code>자 각 나 히.</code>：私に道具がある／私は道具を持っている。</li><li><code>자 각 네 히.</code>：あなたのところに道具がある。</li><li><code>나 후 자 각.</code>：私に関係する道具が存在する。</li><li><code>네 후 자 각 나 히.</code>：あなたに関係する道具が私のところにある。</li></ul>
-<p><code>히</code>は存在文では所在・関係先を示すが、法的所有権まで指定しない。所有・関連を表す<code>후</code>と、存在文の所在を表す<code>히</code>は機能が異なる。</p>
-<h3 id="grammar-v08-4">照応（制限付き試験採用）</h3>
-<p>既存の<code>가</code>（対象）と<code>니</code>（言葉を扱う人）は、先行する話題に<strong>対象が一つだけ</strong>ある場合、それを指し直すことができる。</p>
-<ul><li><code>나 렉 기. 가 킬.</code>：私は情報媒体を作る。それは良い。</li><li><code>니 멕 차. 니 멕 치.</code>：ある人物は音を好む。その人物は言語を好む。</li></ul>
-<p>候補となる対象が複数あれば、照応先が曖昧になるためこの用法は避ける。<code>나</code>（私）、<code>네</code>（他者）の基本用法は維持。</p>
-<h3 id="grammar-v08-5">文の接続（未採用の検討案）</h3>
-<ul><li><code>節A 하 節B</code>：「そして」。名詞の並列との境界が不明。</li><li><code>節A 호 節B</code>：「だから」。起点助詞との境界が不明。</li><li><code>節A 타 節B</code>：「もし」。真理の語義との衝突が不明。</li></ul>
-<p>接続詞としてはまだ正式採用しない。独立文を並べることはできるが、それだけで因果や条件は確定しない。</p>
-<h3 id="grammar-v08-6">未解決</h3>
-<p>所在と所有権の区別、照応先が複数ある場合、文の接続と音声上の節境界、存在動詞の否定や時制の具体的運用は今後検証する。Ver.0.7の修飾規則は引き続き有効。</p></section><section class="chapter" id="dictionary" aria-label="語根辞書"><div class="chapter-label">SEROHAN / 語根辞書</div><div class="search"><label for="dictionary-search">語根を探す</label><input id="dictionary-search" type="search" placeholder="ハングル・ラテン転写・日本語で検索" autocomplete="off"><p id="search-status" role="status" aria-live="polite"></p></div><h2 id="dictionary-1">セロハン語 語根辞書 Ver.0.7（80語根・24未使用枠）</h2>
+<div class="layout"><aside><nav aria-label="章ナビゲーション"><a class="home-link" href="#home">はじめに</a><a href="#overview"><span>01</span>設計概要</a><a href="#grammar"><span>02</span>基本文法</a><a href="#grammar-v09"><span>03</span>Ver.0.9 否定・設計判断</a><a href="#dictionary"><span>04</span>語根辞書</a><a href="#particles"><span>05</span>助詞</a><a href="#verb-inflection"><span>06</span>動詞活用（試験運用）</a><a href="#examples"><span>07</span>現行例文集</a><a href="#translations"><span>08</span>翻訳ストレステスト</a><a href="#grammar-v06"><span>09</span>歴史資料 Ver.0.6</a><a href="#grammar-v07"><span>10</span>歴史資料 Ver.0.7</a><a href="#grammar-v08"><span>11</span>歴史資料 Ver.0.8</a><a href="#migration"><span>12</span>歴史資料 語根移行表</a></nav><div class="sidebar-note">概念 → 役割 → 関係<br>小さな規則で、豊かな表現を。</div></aside>
+<main id="main"><section id="home" class="hero"><div class="eyebrow">A CONSTRUCTED LANGUAGE</div><h1>一音節から、<br>広がることば。</h1><p class="intro">ハングルの構造から生まれた人工言語、セロハン語。<br>一つの概念に終声を添えて、表現のかたちを変える。</p><div class="word-study"><div><b lang="ko">메</b><span>概念 / 愛</span></div><span class="arrow" aria-hidden="true">→</span><div><b lang="ko">멕</b><span>行為 / 愛する</span></div><span class="arrow" aria-hidden="true">→</span><div><b lang="ko">멥</b><span>修飾 / 愛をもって</span></div></div><div class="hero-bottom"><a class="button" href="#grammar">基本文法から読む <span aria-hidden="true">↗</span></a><p>80 語根 <span> / </span> 5 基本助詞 <span> / </span> SVO 語順</p></div><p class="scope">基本体系と活用の試案を収録。未定の規則は各章に明記しています。</p></section><section class="chapter" id="overview" aria-label="設計概要"><div class="chapter-label">SEROHAN / 設計概要</div><h2 id="overview-1">セロハン語 設計概要 Ver.0.9</h2>
+<p>小さな語根集合と規則的な語形成で複雑な意味を説明する人工言語。語根は80個、未使用24枠は予約されたまま。配置はVer.0.7辞書を維持する。</p>
+<p>語根はCV一音節（初声ㅇは無音）。採用母音はㅏ・ㅔ・ㅣ・ㅗ・ㅜ・ㅑ・ㅛ・ㅠ。ㅘ・ㅝ・ㅟ・ㅞの意味領域は予約段階。韓国語の語彙や音変化は採用しない。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">終声</th><th scope="col">機能</th><th scope="col">例</th></tr></thead><tbody><tr><td>なし</td><td>概念</td><td>메 愛</td></tr><tr><td>ㄱ</td><td>行為</td><td>멕 愛する</td></tr><tr><td>ㄹ</td><td>属性</td><td>멜 愛情のある</td></tr><tr><td>ㅂ</td><td>様態などの修飾</td><td>멥 愛をもって</td></tr><tr><td>ㅁ</td><td>具体的実体</td><td>멤 愛の具体的現れ</td></tr></tbody></table></div>
+<p>実体化は単なる名詞化ではない。<code>오</code>は木の概念、<code>옴</code>は具体的な木。<code>나</code>は私の人格、<code>남</code>は私の身体。無終声語も主語・目的語にできる。</p>
+<p>終声の転写はㄱ=k、ㄹ=l、ㅂ=b、ㅁ=m。複合終声は構成順にgs・lg・lb・nh・lt・lh・bs。初声ㄹはr。子音を順に読み、韓国語の終声中和は適用しない。補助母音などの詳細は未定で、音声上の聞き取りやすさは未検証。</p>
+<p>SVOと独立したㅎ助詞を使う。属性は名詞の前、様態修飾は述語の前。후は必ず右結合。自然言語の語義を複合表現に無条件で割り当てず、意味候補と固定語義を区別する。</p>
+<p>Ver.0.9の否定は既存語義が「否定・拒絶」の<code>퍄</code>を局所的に使う。構文と比較は<a href="#grammar-v09">Ver.0.9仕様</a>。語根数を増やして不足を隠さず、翻訳不能例も検証結果に残す。</p></section><section class="chapter" id="grammar" aria-label="基本文法"><div class="chapter-label">SEROHAN / 基本文法</div><h2 id="grammar-1">セロハン語 基本文法 Ver.0.9</h2>
+<p><a href="#grammar-v09">Ver.0.9仕様</a>が否定と未解決範囲の正本。0.6～0.8は採用履歴として参照する。</p>
+<h3 id="grammar-2">文と名詞句</h3>
+<pre><code>主語 ㅂ修飾語* 述語 目的語? 格助詞句*
+나 멕 네                    私はあなたを愛する。
+나 록 제 헤                 私は建物へ行く。
+나 록 오 제 헤              私は木を建物へ動かす。
+옴 칼                       その木は大きい。</code></pre>
+<p>属性述語は目的語を取らない。目的語なしの動詞文は対象を限定しない行為。록は目的語なしで主語の移動、ありで対象の移動。他の派生動詞の項構造をこの一例から自動生成しない。無標ㄱは時制を指定しない。</p>
+<p>一語はハングル一音節。語間に空白、文末に句点または改行を使う。文境界の発話実現は未定。句読点だけで節の従属関係を作らない。</p>
+<h3 id="grammar-3">修飾と関連</h3>
+<p>任意の使用語根をㄹ属性にできる。複数属性は同じ中心語を並列修飾し、順序で階層を作らない。ㅂ形は述語直前で様態などを表す。</p>
+<pre><code>나 멕 칼 옴                 私は大きい木を愛する。
+나 몹 렉                    私は喜んで作る。
+나 렉 다 히                 私は手で作る。
+콜 켈 기                    新しく小さい情報媒体。
+살 툘 차 후 기              時間的で秩序ある音に関係する媒体。
+나 후 기 후 제              私に関係する「媒体に関係する建物」。</code></pre>
+<p>후は関連元と対象を結び、所有・所属・内容などは文脈。左側は単純名詞句、右側は再帰する関連名詞句。<code>A 후 B 후 C</code>は必ず右結合で、解説用括弧は正式表記に含めない。左結合には読まない。</p>
+<p>헤・히・호は名詞句直後に付き、句全体は目的語より後。目的語なしでは述語の後。하は単純名詞句2つの並列。후と하の混在や3項並列の結合規則は未定。</p>
+<pre><code>나 하 네 록 제 헤           私とあなたは建物へ行く。
+나 렉 네 후 오 히           私はあなたの木で作る。
+나 록 아 호 제 헤           私は起伏のある地形から建物へ移動する。</code></pre>
+<h3 id="grammar-4">存在・所在所有・照応</h3>
+<p><code>각</code>は存在動詞。<code>X 각 Y 히</code>はYのところにXがあること。所有の解釈は可能だが法的所有権は指定しない。후による関連付けとは異なる。</p>
+<pre><code>옴 각                       木が存在する。
+자 각 나 히                 私のところに道具がある。
+네 후 자 각 나 히           あなたの道具が私のところにある。
+나 렉 기. 가 킬.            私は情報媒体を作る。それは良い。</code></pre>
+<p>가・니の照応は先行話題の対象／人物がそれぞれ一つだけの場合に限定。複数候補の選択規則は作らない。最後の例は対象候補が媒体一つの文脈で使う。人格主語나まで対象候補に数える談話では使わない。</p>
+<h3 id="grammar-5">否定・活用・疑問</h3>
+<p>動詞否定ㄶを維持。<code>퍄</code>は述語または属性の直前に置き、直後の一つを否定する。過去・相は複合終声を一語につき一つ使う。作用域は<a href="#grammar-v09">Ver.0.9仕様</a>、活用表は<a href="#verb-inflection">動詞活用</a>。</p>
+<pre><code>나 멚 오                    私は木を愛さない。
+나 멕 퍄 칼 오              私は大きくない木を愛する。
+나 퍄 멗 오                 過去に私が木を愛したということはない。
+나 퍄 멚 오                 私は木を愛さないわけではない。
+네 멕 나 티                 あなたは私を愛しますか。</code></pre>
+<p>文末티はYes/No疑問。<code>나 멕 티</code>は「私は認識を愛する」と「私は愛するか」の構文上の曖昧さがある。疑問符のみでは音声上の衝突を解消しない。</p>
+<p>節接続、補文、等値、関係節、疑問詞、命令、量化、終声の積み重ねは未採用。未定部分を訳やパーサーの都合で確定しない。</p></section><section class="chapter" id="grammar-v09" aria-label="Ver.0.9 否定・設計判断"><div class="chapter-label">SEROHAN / Ver.0.9 否定・設計判断</div><h2 id="grammar-v09-1">セロハン語 Ver.0.9：否定と整合性</h2>
+<p>2026-11-06。現行仕様は本書と基本文法・辞書・助詞・活用・現行例文。本書が旧版に優先する。使用語根80・未使用枠24、SVO、후の右結合、ㄹの並列修飾、각と所在所有、制限付き照応は維持する。旧版は変更せず保存する。</p>
+<h3 id="grammar-v09-2">採用範囲</h3>
+<p>今回の追加は <strong>퍄 による局所的な否定</strong>。既存語義「否定・拒絶」の文法化であり、新語根や未使用枠の復活ではない。既存の動詞活用案7種をVer.0.9の試験運用表として明示する。終声の積み重ねは導入しない。節接続・補文・量化・等値文は未採用のまま。</p>
+<h3 id="grammar-v09-3">否定の構文</h3>
+<pre><code>中心語       := 使用語根 | 使用語根＋ㅁ
+属性         := 使用語根＋ㄹ | 퍄 属性
+単純名詞句   := 属性* 中心語
+関連名詞句   := 単純名詞句 (후 関連名詞句)?
+並列名詞句   := 単純名詞句 하 単純名詞句
+動詞         := 使用語根＋採用動詞終声
+述語         := 動詞 | 使用語根＋ㄹ | 퍄 述語
+動詞文       := 名詞句 ㅂ修飾語* 述語 目的語? 格助詞句*
+属性文       := 名詞句 ㅂ修飾語* 述語 格助詞句*</code></pre>
+<p>動詞文の述語の核は動詞、属性文の核はㄹ属性。属性述語は目的語を取らない。名詞句には関連名詞句または並列名詞句を使う。並列と후の混在、3項以上の並列は未定であり、この部分文法の外。格助詞句は名詞句＋헤／히／호。後方互換の文末티は維持するが、曖昧性を消したとは主張しない。</p>
+<p><code>퍄</code> は直後の属性または述語だけを否定する前置演算子。名詞句全体や節全体を直接包む演算子ではない。述語の否定では主語・目的語を埋めた命題の成立を否定する。格助詞句の焦点否定や量化との作用域は未定。連体位置ではその属性だけを否定し、ほかの並列属性には及ばない。</p>
+<ul><li><code>나 퍄 멕 옴.</code>：私はその木を愛していない。<code>NOT LOVE(私, 木)</code>。無標形は進行相を強制しない。</li><li><code>나 멚 옴.</code>：従来の動詞否定。同じ命題内容を表す短縮形として維持。</li><li><code>나 퍄 멣 옴.</code>：私はその木を愛している状態にはない。否定が継続相の外側にかかる。</li><li><code>나 멕 퍄 칼 옴.</code>：私は大きくない木を愛する。<code>LOVE(私, 木 AND NOT BIG)</code>。「小さい」とは同義でない。</li><li><code>나 멕 퍄 칼 콜 옴.</code>：私は、大きくなく新しい木を愛する。新しさは否定しない。</li><li><code>나 퍄 멗 옴.</code>：私はその木を愛していなかった。<code>NOT PAST(LOVE)</code>。過去のどの期間かは文脈。「一度も」の量化は含まない。</li><li><code>나 퍄 멚 옴.</code>：私はその木を愛していないわけではない。<code>NOT NOT LOVE</code>。緩叙的な含意は文脈。肯定の強さを別文法で保証しない。</li><li><code>옴 퍄 칼.</code>：その木は大きくない。</li><li><code>자 퍄 각 나 히.</code>／<code>자 갆 나 히.</code>：私のところに道具がある、ということはない。法的所有権は含まない。</li></ul>
+<p>複合終声ㄶは <code>퍄 + 同語根ㄱ動詞</code> と同じ否定。<code>퍄</code>を活用形の前に置けば <code>NOT(PAST(P))</code>、<code>NOT(CONTINUING(P))</code> などを表せる。<code>PAST(NOT(P))</code>を独立に符号化する構文は今回追加しない。時制と否定の交換を一般法則にしない。</p>
+<p><code>퍄</code> の概念語用法も残る：<code>나 멕 퍄.</code>（私は否定・拒絶という概念を愛する）。後ろに述語形が来たときだけ演算子として解析候補を作る。語を見ただけで常に演算子に置換しない。<code>퍄 퍄 칼 옴</code> は二重否定属性をもつ木の名詞句であり、括弧は発話に不要。</p>
+<h3 id="grammar-v09-4">指定された否定6例の到達点</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">日本語</th><th scope="col">結果</th><th scope="col">理由</th></tr></thead><tbody><tr><td>私は木を愛していない</td><td><code>나 멚 오</code></td><td>動詞否定。継続相の明示なら <code>나 퍄 멣 오</code></td></tr><tr><td>私が愛しているのは木ではない</td><td>未訳</td><td>焦点・等値否定・関係節が未定。<code>나 멚 오</code>への置換は意味を変える</td></tr><tr><td>私は大きくない木を愛している</td><td><code>나 멣 퍄 칼 오</code></td><td>否定が属性だけにかかる</td></tr><tr><td>誰も木を愛していない</td><td>未訳</td><td>全称／存在量化がない。<code>니 멚 오</code>は人物に関する否定で「誰も」ではない</td></tr><tr><td>私は木を愛していなかった</td><td><code>나 퍄 멗 오</code>（期間は文脈）</td><td>過去の愛の成立を否定。過去継続相まで同時標示はできない</td></tr><tr><td>私は木を愛していないわけではない</td><td><code>나 퍄 멚 오</code></td><td>否定の外側からもう一度否定</td></tr></tbody></table></div>
+<h3 id="grammar-v09-5">文接続の比較と判断</h3>
+<p>評点は小／中／大の相対評価。「規則」は追加量、「明確さ」は音声構造の明確さ。他の列は利点の程度。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">案</th><th scope="col">規則</th><th scope="col">明確さ</th><th scope="col">一意性</th><th scope="col">表現力</th><th scope="col">既存整合</th><th scope="col">語根追加不要</th><th scope="col">学習容易性</th><th scope="col">判断</th></tr></thead><tbody><tr><td>A 하 B／A 호 B／A 타 B</td><td>小</td><td>小</td><td>小</td><td>大</td><td>小</td><td>はい</td><td>中</td><td>保留</td></tr><tr><td>既存語を開始・終端の対標識にする</td><td>大</td><td>中</td><td>中</td><td>大</td><td>小</td><td>はい</td><td>小</td><td>未採用</td></tr><tr><td>新ㅎ助詞で開始・終端を区別</td><td>大</td><td>大</td><td>大の可能性</td><td>大</td><td>中</td><td>語彙語根は不要だが助詞は増加</td><td>小</td><td>未採用</td></tr><tr><td>独立文を並べる</td><td>追加なし</td><td>文境界の発話実現は未定</td><td>接続関係は符号化しない</td><td>小</td><td>大</td><td>はい</td><td>大</td><td>従来の談話運用のみ</td></tr></tbody></table></div>
+<p>衝突の具体例（以下は<strong>候補案の反例</strong>であり現行例文ではない）：</p>
+<ul><li><code>나 멕 오 하 네 멕 아</code>：<code>나 멕 오</code> と <code>네 멕 아</code> の節並列に見えるが、<code>오 하 네</code> は従来の名詞句並列にもなる。後者は文全体として未完成だが、逐次聞き取りでは境界を遅くまで決定できない。完全な二解析の証明とは区別する。</li><li><code>나 록 아 호 네 록 제 헤</code>：<code>아 호</code> は既存の起点句。<code>호</code>が節接続なら前節をどこで閉じるか別規則が必要。</li><li><code>나 멕 타</code> は「私は真理を愛する」で完結する。타を条件標識にすると、この語義を境界規則なしに奪ってしまう。</li><li><code>나 릭 네 멕 오</code> は発話の目的語として節を許可した案でのみ読める。<code>나 릭 네</code>（私はあなたについて発話する）という既存形の後に述語が残る。補文の終端、目的語、後続格句、入れ子での帰属が未定。</li><li>補文を無標で許すと <code>나 릭 네 멕 오 제 히</code> には「建物で私は『あなたが木を愛する』と言う」と「私は『あなたが建物で木を愛する』と言う」の二つの完全な帰属解析が生じる。後続히句が主節・補文のどちらに属するかの<strong>構文的曖昧さ</strong>であり、場所／手段の意味選択とは別。</li><li>例えば節をA・B・Cとすると <code>A 하 B 호 C</code> は「Aそして、BだからC」と「AそしてB、だからC」で因果の範囲が違う。候補を採用するには優先順位・結合方向または音声で伝わる終端規則を追加する必要がある。</li></ul>
+<p>因果と条件の語義を起点や真理から自動的に導くのは不十分。逆接には期待と不成立の関係が必要で、<code>포</code>（悪）などへの置換は意味を歪める。思考・発話語根 <code>미</code>／<code>리</code> はあるが、節を名詞句に変える規則はない。したがって並列・因果・条件・逆接・補文のいずれも新しい節構文としては採用しない。句点だけで従属範囲を決める案も却下する。</p>
+<h3 id="grammar-v09-6">否定の代替案</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">案</th><th scope="col">結果</th></tr></thead><tbody><tr><td>ㄶのみ</td><td>維持するが属性否定・過去との併用ができない</td></tr><tr><td>퍄を任意の語・句の前に置く</td><td>作用域の終端が不明なので不採用</td></tr><tr><td>퍄を述語／属性直前に限定</td><td>採用。既存語義と整合し、既存終声を再利用する</td></tr><tr><td>켈「小さい」で「大きくない」を代用</td><td>不採用。中間の大きさもあり、論理的否定と異なる</td></tr><tr><td>파「不在」を否定一般に転用</td><td>不採用。不在と命題否定を混同する</td></tr><tr><td>新しい複合終声に否定過去を割り当てる</td><td>不採用。組合せごとの不規則な表が増え、属性や二重否定に拡張しづらい</td></tr></tbody></table></div>
+<h3 id="grammar-v09-7">パーサーが保証する範囲</h3>
+<p><code>check_grammar.py</code> は上記の部分文法の候補を列挙する。<code>parsed</code> は部分文法内の一解析、<code>ambiguous</code> は複数解析、<code>unsupported</code> は部分文法で未解析、<code>invalid_lexeme</code> は語彙／終声違反。未解析を言語全体での非文法性と断定しない。意味の適切さ、照応先、所有権、全称性、実際の音声聞き取りは自動証明しない。</p>
+<p><code>나 멕 티</code> は「私は認識を愛する」と「私は愛するか」の二解析。<code>?</code>を付けても同じ音列の解析候補は減らさない。複合終声の発音は子音を順に読む従来規則だが、補助母音・休止・知覚実験は未整備。形式上一意と発話で聞き取りやすいことは区別する。</p></section><section class="chapter" id="dictionary" aria-label="語根辞書"><div class="chapter-label">SEROHAN / 語根辞書</div><div class="search"><label for="dictionary-search">語根を探す</label><input id="dictionary-search" type="search" placeholder="ハングル・ラテン転写・日本語で検索" autocomplete="off"><p id="search-status" role="status" aria-live="polite"></p></div><h2 id="dictionary-1">セロハン語 語根辞書 Ver.0.7（80語根・24未使用枠）</h2>
 <h3 id="dictionary-2">運用上の注意</h3>
 <p>この辞書は13初声×8母音＝104枠のうち80語根を使用し、24枠を未使用にするVer.0.7の暫定設計。語根数は80であり、未使用枠の旧語義は使用しない。母音の意味領域は検証中の目安であり、既存の母音説明を最終確定したものではない。韓国語の同じ綴りから意味を借用しない。</p>
 <p><code>네</code> は他者を指し、対話では「あなた」、文脈によって「その人」と解釈する。<code>너</code> は未採用。ㅎ系列は助詞専用で、語根として派生させない。</p>
@@ -284,7 +127,7 @@
 <div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">Ver.0.7 の意味</th><th scope="col">状態</th></tr></thead><tbody><tr><td>자</td><td>ja</td><td>道具一般</td><td>使用</td></tr><tr><td>제</td><td>je</td><td>建造空間・建物</td><td>使用</td></tr><tr><td>지</td><td>ji</td><td>—（旧：本）</td><td>未使用</td></tr><tr><td>조</td><td>jo</td><td>衣服・覆う素材</td><td>使用</td></tr><tr><td>주</td><td>ju</td><td>刃・切断用具</td><td>使用</td></tr><tr><td>쟈</td><td>jya</td><td>—（旧：装置）</td><td>未使用</td></tr><tr><td>죠</td><td>jyo</td><td>—（旧：建物）</td><td>未使用</td></tr><tr><td>쥬</td><td>jyu</td><td>機械・複雑な機器</td><td>使用</td></tr></tbody></table></div>
 <hr>
 <h3 id="dictionary-17">ㅊ（情報・言語）</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">意味</th></tr></thead><tbody><tr><td>차</td><td>cha</td><td>音・音響</td><td>使用</td></tr><tr><td>체</td><td>che</td><td>文字・記号</td><td>使用</td></tr><tr><td>치</td><td>chi</td><td>言語・言語体系</td><td>使用</td></tr><tr><td>초</td><td>cho</td><td>名前・識別標識</td><td>使用</td></tr><tr><td>추</td><td>chu</td><td>知識・蓄積情報</td><td>使用</td></tr><tr><td>챠</td><td>chya</td><td>—（旧：歌）</td><td>未使用</td></tr><tr><td>쵸</td><td>chyo</td><td>—（旧：歴史）</td><td>未使用</td></tr><tr><td>츄</td><td>chyu</td><td>体系化した知識・学問</td><td>使用</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">意味</th><th scope="col">状態</th></tr></thead><tbody><tr><td>차</td><td>cha</td><td>音・音響</td><td>使用</td></tr><tr><td>체</td><td>che</td><td>文字・記号</td><td>使用</td></tr><tr><td>치</td><td>chi</td><td>言語・言語体系</td><td>使用</td></tr><tr><td>초</td><td>cho</td><td>名前・識別標識</td><td>使用</td></tr><tr><td>추</td><td>chu</td><td>知識・蓄積情報</td><td>使用</td></tr><tr><td>챠</td><td>chya</td><td>—（旧：歌）</td><td>未使用</td></tr><tr><td>쵸</td><td>chyo</td><td>—（旧：歴史）</td><td>未使用</td></tr><tr><td>츄</td><td>chyu</td><td>体系化した知識・学問</td><td>使用</td></tr></tbody></table></div>
 <hr>
 <h3 id="dictionary-18">ㅋ（性質・変化）</h3>
 <div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">Ver.0.7 の意味</th><th scope="col">状態</th></tr></thead><tbody><tr><td>카</td><td>ka</td><td>大きい・大きさ</td><td>使用</td></tr><tr><td>케</td><td>ke</td><td>小さい・小ささ</td><td>使用</td></tr><tr><td>키</td><td>ki</td><td>良い・好ましい</td><td>使用</td></tr><tr><td>코</td><td>ko</td><td>新しい・新規</td><td>使用</td></tr><tr><td>쿠</td><td>ku</td><td>古い・以前からの</td><td>使用</td></tr><tr><td>캬</td><td>kya</td><td>強い・強度</td><td>使用</td></tr><tr><td>쿄</td><td>kyo</td><td>豊か・多量</td><td>使用</td></tr><tr><td>큐</td><td>kyu</td><td>高度・複雑</td><td>使用</td></tr></tbody></table></div>
@@ -293,144 +136,23 @@
 <div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">Ver.0.7 の意味</th><th scope="col">状態</th></tr></thead><tbody><tr><td>타</td><td>ta</td><td>真理・正しさ</td><td>使用</td></tr><tr><td>테</td><td>te</td><td>自由・制約の少なさ</td><td>使用</td></tr><tr><td>티</td><td>ti</td><td>知・認識の成立</td><td>使用</td></tr><tr><td>토</td><td>to</td><td>—（旧：世界観）</td><td>未使用</td></tr><tr><td>투</td><td>tu</td><td>価値・重要性</td><td>使用</td></tr><tr><td>탸</td><td>tya</td><td>—（旧：原理）</td><td>未使用</td></tr><tr><td>툐</td><td>tyo</td><td>秩序・整列</td><td>使用</td></tr><tr><td>튜</td><td>tyu</td><td>文明・社会的技術体系</td><td>使用</td></tr></tbody></table></div>
 <hr>
 <h3 id="dictionary-20">ㅍ（否定・ネガティブ）</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">Ver.0.7 の意味</th><th scope="col">状態</th></tr></thead><tbody><tr><td>파</td><td>pa</td><td>不在・欠如</td><td>使用</td></tr><tr><td>페</td><td>pe</td><td>死・生命の終了</td><td>使用</td></tr><tr><td>피</td><td>pi</td><td>誤り・不正確</td><td>使用</td></tr><tr><td>포</td><td>po</td><td>悪・望ましくなさ</td><td>使用</td></tr><tr><td>푸</td><td>pu</td><td>暗い・光の少なさ</td><td>使用</td></tr><tr><td>퍄</td><td>pya</td><td>否定・拒絶</td><td>使用</td></tr><tr><td>표</td><td>pyo</td><td>危険・潜在的害</td><td>使用</td></tr><tr><td>퓨</td><td>pyu</td><td>—（旧：損失）</td><td>未使用</td></tr></tbody></table></div></section><section class="chapter" id="migration" aria-label="Ver.0.7 移行表"><div class="chapter-label">SEROHAN / Ver.0.7 移行表</div><h2 id="migration-1">Ver.0.7 語根圧縮・移行表（暫定）</h2>
-<p>104枠のうち80語根を使用、24枠を未使用にする案。これらは辞書の確定語義ではなく、Ver.0.6の属性修飾および <code>후</code> による関連を利用した説明表現。◎比較的自然、○文脈によって可能、△精度不足。なお、未使用語根から終声派生を作らない。</p>
-<div class="table-wrap"><table><thead><tr><th scope="col">未使用</th><th scope="col">旧意味</th><th scope="col">代替表現案</th><th scope="col">評価</th><th scope="col">留意点</th></tr></thead><tbody><tr><td>교</td><td>大地</td><td>아（地形・陸地）</td><td>○</td><td>地表・大地の広がりまでは特定しない</td></tr><tr><td>규</td><td>機械部品</td><td>쥬 후 갸</td><td>◎</td><td>機械の構成要素</td></tr><tr><td>냐</td><td>子ども</td><td>샬 니</td><td>○</td><td>初期段階の人。年齢区分は文脈</td></tr><tr><td>뉴</td><td>家畜</td><td>바 후 누</td><td>○</td><td>家畜以外の家庭動物も含み得る</td></tr><tr><td>댜</td><td>指</td><td>다 후 갸</td><td>○</td><td>手の部分だが指に限定しない</td></tr><tr><td>됴</td><td>顔</td><td>도 후 소</td><td>△</td><td>目の位置と顔は同義でない</td></tr><tr><td>듀</td><td>内臓</td><td>남 후 갸</td><td>△</td><td>身体の部分であり内部とは限らない</td></tr><tr><td>먀</td><td>感情</td><td>마</td><td>◎</td><td>心の語義を一般化</td></tr><tr><td>묘</td><td>自然への感情</td><td>아 후 마</td><td>△</td><td>地形に関する心に限定される</td></tr><tr><td>뮤</td><td>人工への興味</td><td>자 후 미</td><td>△</td><td>思考と興味は異なる</td></tr><tr><td>뱌</td><td>家庭</td><td>바</td><td>○</td><td>世帯と家庭の感情面は区別しない</td></tr><tr><td>뵤</td><td>国土</td><td>노 후 아</td><td>△</td><td>国の領域と群れの陸地は異なる</td></tr><tr><td>쇼</td><td>季節</td><td>오 후 사</td><td>△</td><td>周期・季節性の表現が弱い</td></tr><tr><td>에</td><td>海</td><td>칼 이</td><td>○</td><td>湖や水量とも解釈可能</td></tr><tr><td>요</td><td>森</td><td>오 후 노</td><td>○</td><td>木の集まり</td></tr><tr><td>유</td><td>川</td><td>롤 이</td><td>○</td><td>水の流れであり地形ではない</td></tr><tr><td>지</td><td>本</td><td>출 기</td><td>○</td><td>知識の媒体全般</td></tr><tr><td>쟈</td><td>装置</td><td>갸 후 자</td><td>○</td><td>部品に関する道具</td></tr><tr><td>죠</td><td>建物</td><td>제</td><td>◎</td><td>建造された空間へ一般化</td></tr><tr><td>챠</td><td>歌</td><td>찰 치</td><td>△</td><td>音に関わる言語で旋律を特定しない</td></tr><tr><td>쵸</td><td>歴史</td><td>쿨 추</td><td>○</td><td>古い知識と歴史は同義ではない</td></tr><tr><td>토</td><td>世界観</td><td>고 후 미</td><td>○</td><td>世界に関する思考</td></tr><tr><td>탸</td><td>原理</td><td>타 후 툐</td><td>△</td><td>真理と秩序の関連で原理は不確定</td></tr><tr><td>퓨</td><td>損失</td><td>부 후 파</td><td>△</td><td>財産以外の損失を表しにくい</td></tr></tbody></table></div>
-<h3 id="migration-2">今後の再検討</h3>
-<ul><li><code>됴</code>（顔）、<code>듀</code>（内臓）、<code>쇼</code>（季節）、<code>뮤</code>（興味）、<code>챠</code>（歌）、<code>탸</code>（原理）の代替は意味が不十分。</li><li>内部／外部、流れ、周期、境界、旋律、関心、法則などの汎用概念を優先検討する。</li><li>母音8系列の意味は再設計中であり、全80語根について初声×母音からの推測可能性をテストする。</li><li>旧例文に現れる未使用語根（例：<code>에</code>・<code>요</code>・<code>지</code>・<code>챠</code>）は旧版の用例とみなす。</li></ul></section><section class="chapter" id="particles" aria-label="助詞"><div class="chapter-label">SEROHAN / 助詞</div><h2 id="particles-1">セロハン語 助詞体系 Ver.0.6</h2>
-<h3 id="particles-2">基本理念</h3>
-<p>セロハン語では、助詞は<strong>終声（パッチム）では表現しない</strong>。</p>
-<p>終声はあくまで<strong>語そのものの役割</strong>を決定するものであり、</p>
-<ul><li>概念</li><li>行為</li><li>属性</li><li>修飾</li><li>実体</li></ul>
-<p>のみを担当する。</p>
-<p>一方、助詞は</p>
-<blockquote><strong>語と語の関係</strong></blockquote>
-<p>を表す独立した語である。</p>
-<p>そのため、助詞は一文字の<strong>CV語</strong>として扱う。</p>
-<hr>
-<h2 id="particles-3">設計方針</h2>
-<p>助詞も通常の語と同じく</p>
-<blockquote><strong>CV一文字</strong></blockquote>
-<p>で構成される。</p>
-<p>終声は付かない。</p>
-<p>文中では名詞の直後に置かれる。</p>
-<pre><code>名詞 + 助詞</code></pre>
-<hr>
-<h2 id="particles-4">助詞の初声について（Ver.0.4での変更）</h2>
-<p>Ver.0.3までは、助詞の初声に <strong>ㄹ</strong>（「関係・接続」を表す初声）を用いていた。</p>
-<p>しかし dictionary.md のㄹ行は「行為・運動」を表す語根（라＝行動、레＝作る、리＝話す、로＝行く、루＝与える、랴＝受ける、료＝探す、류＝変える）としてすでに割り当てられており、</p>
-<p>無終声（概念のまま）の状態ではこれらと助詞が<strong>完全に同音</strong>になってしまう問題があった。</p>
-<p>そのため Ver.0.4 では、助詞の初声を初声一覧の中で<strong>唯一未使用だったㅎ</strong>に変更する。</p>
-<p>これにより、</p>
-<ul><li>ㄹ系列 → 行為・運動の語根専用</li><li>ㅎ系列 → 助詞専用</li></ul>
-<p>と役割が完全に分離され、無終声語根と助詞が衝突することはなくなった。</p>
-<p>母音による関係の区別（ア＝共同、エ＝方向……）はVer.0.3までの体系をそのまま引き継ぐ。</p>
-<hr>
-<h2 id="particles-5">基本助詞（正式採用）</h2>
-<div class="table-wrap"><table><thead><tr><th scope="col">助詞</th><th scope="col">ラテン</th><th scope="col">意味</th></tr></thead><tbody><tr><td>하</td><td>ha</td><td>～と（共同・並列）</td></tr><tr><td>헤</td><td>he</td><td>～へ（方向・目的地）</td></tr><tr><td>히</td><td>hi</td><td>～で（場所・手段）</td></tr><tr><td>호</td><td>ho</td><td>～から（起点・出発点）</td></tr><tr><td>후</td><td>hu</td><td>～の（所有・所属・一般的関連）</td></tr></tbody></table></div>
-<hr>
-<h2 id="particles-6">拡張助詞（将来実装）</h2>
-<div class="table-wrap"><table><thead><tr><th scope="col">助詞</th><th scope="col">ラテン</th><th scope="col">意味</th></tr></thead><tbody><tr><td>햐</td><td>hya</td><td>～に（受益・間接目的）</td></tr><tr><td>효</td><td>hyo</td><td>～より（比較）</td></tr><tr><td>휴</td><td>hyu</td><td>～によって（原因・理由・手段）</td></tr></tbody></table></div>
-<p>これらは未採用の予約語である。以下の用例も将来案として扱い、現行の例文には用いない。</p>
-<hr>
-<h2 id="particles-7">用法</h2>
-<h4 id="particles-8">하（ha）</h4>
-<p>共同・並列</p>
-<pre><code>나 하 네
-私とあなた</code></pre>
-<hr>
-<h4 id="particles-9">헤（he）</h4>
-<p>方向・目的</p>
-<pre><code>에 헤
-海へ</code></pre>
-<pre><code>아 헤
-山へ</code></pre>
-<hr>
-<h4 id="particles-10">히（hi）</h4>
-<p>場所・手段</p>
-<pre><code>에 히
-海で</code></pre>
-<pre><code>오 히
-木で（木を使って）</code></pre>
-<hr>
-<h4 id="particles-11">호（ho）</h4>
-<p>起点</p>
-<pre><code>에 호
-海から</code></pre>
-<pre><code>제 호
-家から</code></pre>
-<hr>
-<h4 id="particles-12">후（hu）</h4>
-<p>関連（所有・所属を含む）</p>
-<pre><code>나 후 오
-私の木</code></pre>
-<pre><code>보 후 바
-村の世帯</code></pre>
-<hr>
-<h4 id="particles-13">햐（hya）</h4>
-<p>受益・間接目的</p>
-<pre><code>나 햐
-私に</code></pre>
-<pre><code>네 햐
-あなたへ</code></pre>
-<hr>
-<h4 id="particles-14">효（hyo）</h4>
-<p>比較</p>
-<pre><code>나 효
-私より</code></pre>
-<pre><code>아 효
-山より</code></pre>
-<hr>
-<h4 id="particles-15">휴（hyu）</h4>
-<p>原因・理由・手段</p>
-<pre><code>피 휴
-誤りによって（予約用法）</code></pre>
-<pre><code>표 휴
-危険によって（予約用法）</code></pre>
-<hr>
-<h2 id="particles-16">文法構造</h2>
-<p>基本語順は</p>
-<blockquote><strong>SVO</strong></blockquote>
-<p>とする。</p>
-<p>主語に続いて述語を置き（ㅂ修飾語を挟む場合を除く）、目的語・助詞句（場所・方向などの修飾要素）はその後に続ける。</p>
-<blockquote><strong>S + V + O + 助詞句</strong></blockquote>
-<p>助詞は必要最小限のみ用いる。</p>
-<p>例</p>
-<pre><code>나 죽 오 에 히</code></pre>
-<p>（私は海で木を切る。）</p>
-<hr>
-<h2 id="particles-17">セロハン語の三層構造</h2>
-<h3 id="particles-18">第一層</h3>
-<p><strong>CV</strong></p>
-<blockquote>概念</blockquote>
-<hr>
-<h3 id="particles-19">第二層</h3>
-<p><strong>終声（パッチム）</strong></p>
-<blockquote>概念をどのような役割で用いるか</blockquote>
-<div class="table-wrap"><table><thead><tr><th scope="col">終声</th><th scope="col">役割</th></tr></thead><tbody><tr><td>∅</td><td>概念</td></tr><tr><td>ㄱ</td><td>行為</td></tr><tr><td>ㄹ</td><td>属性</td></tr><tr><td>ㅂ</td><td>修飾</td></tr><tr><td>ㅁ</td><td>実体</td></tr></tbody></table></div>
-<hr>
-<h3 id="particles-20">第三層</h3>
-<p><strong>助詞（ㅎ系列CV）</strong></p>
-<blockquote>語と語の関係</blockquote>
-<div class="table-wrap"><table><thead><tr><th scope="col">助詞</th><th scope="col">関係</th></tr></thead><tbody><tr><td>하</td><td>共（共同・並列）</td></tr><tr><td>헤</td><td>向（方向・目的）</td></tr><tr><td>히</td><td>位（場所・手段）</td></tr><tr><td>호</td><td>起（起点・出発）</td></tr><tr><td>후</td><td>属（所有・所属）</td></tr><tr><td>햐</td><td>与（受益・間接目的）</td></tr><tr><td>효</td><td>比（比較）</td></tr><tr><td>휴</td><td>因（原因・理由・手段）</td></tr></tbody></table></div>
-<hr>
-<h2 id="particles-21">設計思想</h2>
-<p>セロハン語では、</p>
-<ul><li><strong>CV</strong>が世界の概念を表す。</li><li><strong>終声</strong>が概念の役割（品詞）を決める。</li><li><strong>ㅎ系列のCV助詞</strong>が概念同士の関係を表す。</li><li><strong>ㄹ系列</strong>は行為・運動の語根専用として、助詞とは完全に分離される。</li></ul>
-<p>これにより、文法は</p>
-<p><strong>「概念 → 役割 → 関係」</strong></p>
-<p>という三層構造で統一される。</p>
-<p>助詞も他の語根と同じCVで構成されるため、言語全体に一貫した規則性が保たれる。</p>
-<h3 id="particles-22">Ver.0.6：후 の結合範囲</h3>
-<p><code>A 후 B</code> は「Aに関係するB」を表す。Aは初版では単独の概念語または実体語に限定し、Bは任意個の属性形に続く中心語とする。例：<code>나 후 콜 짐</code>（私の新しい本）、<code>추 후 잠</code>（知識に関連する道具）。入れ子・複合所有者は保留。詳しくは <a href="#grammar-v06">Ver.0.6文法拡張</a>。</p></section><section class="chapter" id="verb-inflection" aria-label="動詞活用案"><div class="chapter-label">SEROHAN / 動詞活用案</div><h2 id="verb-inflection-1">セロハン語 ダブルパッチム体系（提案）</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">ハングル</th><th scope="col">ラテン</th><th scope="col">Ver.0.7 の意味</th><th scope="col">状態</th></tr></thead><tbody><tr><td>파</td><td>pa</td><td>不在・欠如</td><td>使用</td></tr><tr><td>페</td><td>pe</td><td>死・生命の終了</td><td>使用</td></tr><tr><td>피</td><td>pi</td><td>誤り・不正確</td><td>使用</td></tr><tr><td>포</td><td>po</td><td>悪・望ましくなさ</td><td>使用</td></tr><tr><td>푸</td><td>pu</td><td>暗い・光の少なさ</td><td>使用</td></tr><tr><td>퍄</td><td>pya</td><td>否定・拒絶</td><td>使用</td></tr><tr><td>표</td><td>pyo</td><td>危険・潜在的害</td><td>使用</td></tr><tr><td>퓨</td><td>pyu</td><td>—（旧：損失）</td><td>未使用</td></tr></tbody></table></div></section><section class="chapter" id="particles" aria-label="助詞"><div class="chapter-label">SEROHAN / 助詞</div><h2 id="particles-1">セロハン語 助詞体系 Ver.0.9</h2>
+<p>ㅎ系列は独立した無終声CV助詞専用。80語根には含めず、語根として派生させない。旧ㄹ助詞は行為語根と同音のため0.4で廃止済み。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">助詞</th><th scope="col">転写</th><th scope="col">採用機能</th><th scope="col">現行例</th></tr></thead><tbody><tr><td>하</td><td>ha</td><td>単純名詞句2項の共同・並列</td><td>나 하 네</td></tr><tr><td>헤</td><td>he</td><td>方向・目的地</td><td>제 헤</td></tr><tr><td>히</td><td>hi</td><td>場所・手段、存在文の所在先</td><td>자 각 나 히</td></tr><tr><td>호</td><td>ho</td><td>起点・出発点</td><td>아 호</td></tr><tr><td>후</td><td>hu</td><td>一般的関連、所有・所属を含む</td><td>나 후 콜 기</td></tr></tbody></table></div>
+<p>헤・히・호は名詞句直後に付き、目的語の後に並ぶ。히の場所／手段は文脈であり、構文木の違いではない。</p>
+<p>후の左側は属性で修飾された単純名詞句、右側は同様の句または후関連句。連続후は右結合：<code>나 후 기 후 제</code>は私に関連する「媒体に関連する建物」。無音の括弧で左結合にはできない。</p>
+<p>하と후の混在、3項以上の並列は結合規則未定。하・호の節接続用法は未採用。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">予約助詞</th><th scope="col">旧候補の意味</th><th scope="col">現状</th></tr></thead><tbody><tr><td>햐</td><td>受益・間接目的</td><td>未採用</td></tr><tr><td>효</td><td>比較</td><td>未採用</td></tr><tr><td>휴</td><td>原因・理由・手段</td><td>未採用</td></tr></tbody></table></div>
+<p>予約語は現行訳に使わない。文末티は別途採用された疑問用法であり、ㅎ系列への追加ではない。否定퍄も語根の限定的文法用法。</p></section><section class="chapter" id="verb-inflection" aria-label="動詞活用（試験運用）"><div class="chapter-label">SEROHAN / 動詞活用（試験運用）</div><h2 id="verb-inflection-1">セロハン語 ダブルパッチム体系 Ver.0.9（試験運用）</h2>
+<p>旧版では提案と採用の見出しが混在していた。Ver.0.9では既存7種を試験運用として統一する。語義・項構造が未確定の動詞までこの表で自動確定しない。</p>
 <h3 id="verb-inflection-2">基本方針</h3>
 <p>ダブルパッチムは<strong>動詞（ㄱ）専用</strong>の活用である。</p>
 <p>すべて韓国語の標準ハングルで入力可能な終声のみ採用する。</p>
 <hr>
-<h3 id="verb-inflection-3">採用するダブルパッチム</h3>
+<h3 id="verb-inflection-3">試験運用するダブルパッチム</h3>
 <div class="table-wrap"><table><thead><tr><th scope="col">パッチム</th><th scope="col">意味</th><th scope="col">用途</th></tr></thead><tbody><tr><td>ㄳ</td><td>過去</td><td>～した</td></tr><tr><td>ㄺ</td><td>未来</td><td>～するだろう</td></tr><tr><td>ㄼ</td><td>願望</td><td>～したい</td></tr><tr><td>ㄶ</td><td>否定</td><td>～しない</td></tr><tr><td>ㄾ</td><td>完了</td><td>～し終えた</td></tr><tr><td>ㅀ</td><td>継続</td><td>～している</td></tr><tr><td>ㅄ</td><td>義務・必要</td><td>～しなければならない</td></tr></tbody></table></div>
 <hr>
-<p>活用は終声ㄱの後ろへ追記せず、終声全体を置き換える。一語に一つのみ適用する。現行案では複数の時制・法・相を同時に標示しない。</p>
+<p>活用は終声ㄱの後ろへ追記せず、終声全体を置き換える。一語に一つのみ適用する。複数の時制・法・相を終声に同時標示しない。否定 <code>퍄</code> を前置できる：<code>나 퍄 멗 오</code>（過去の愛の成立を否定）、<code>나 퍄 멣 오</code>（継続状態を否定）。ㄶは <code>퍄＋ㄱ動詞</code> と同義で、<code>나 퍄 멚 오</code> は二重否定。詳細は <a href="#grammar-v09">Ver.0.9仕様</a>。</p>
 <h3 id="verb-inflection-4">将来必要なら追加</h3>
 <div class="table-wrap"><table><thead><tr><th scope="col">パッチム</th><th scope="col">候補</th></tr></thead><tbody><tr><td>ㄽ</td><td>推量・可能性</td></tr><tr><td>ㄵ</td><td>可能・能力</td></tr></tbody></table></div>
 <p>これらは文法拡張時のみ導入する。</p>
@@ -452,64 +174,96 @@
 <p>これにより、</p>
 <ul><li>語形成</li><li>動詞活用</li><li>文法関係</li></ul>
 <p>の三つが明確に分離される。</p>
-<p>また、すべて標準ハングル入力のみで記述できるため、パソコン・スマートフォンでも特別な入力方法を必要としない。</p></section><section class="chapter" id="examples" aria-label="例文集"><div class="chapter-label">SEROHAN / 例文集</div><h2 id="examples-1">セロハン語 例文集 Ver.0.3（旧104語根の用例）</h2>
-<blockquote><strong>互換性注意（Ver.0.7）</strong>：この文書は旧辞書に基づく参考資料です。<code>에</code>（旧：海）、<code>요</code>（旧：森）、<code>지</code>（旧：本）、<code>챠</code>（旧：歌）など、Ver.0.7で未使用になった語根が含まれます。現行の使用語根は <a href="#dictionary">dictionary.md</a>、代替表現は <a href="#migration">lexicon-v0.7-migration.md</a> を参照してください。</blockquote>
-<h3 id="examples-2">基本文型</h3>
-<h4 id="examples-3">SVO（主語＋動詞＋目的語）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 멕 네</td><td>na mek ne</td><td>私はあなたを愛する</td><td>基本的なSVO文</td></tr><tr><td>네 멕 나</td><td>ne mek na</td><td>あなたは私を愛する</td><td>主語と目的語の入れ替え</td></tr><tr><td>나 렉 오</td><td>na rek o</td><td>私は木を作る</td><td>動詞＋目的語</td></tr><tr><td>나 락 에 히</td><td>na rak e hi</td><td>私は海で行動する</td><td>動詞＋場所助詞句</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-4">助詞の使用例</h3>
-<h4 id="examples-5">하（ha）～と（共同・並列）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 하 네 멕</td><td>na ha ne mek</td><td>私とあなたは愛する</td><td>主語の並列</td></tr><tr><td>오 하 아</td><td>o ha a</td><td>木と山</td><td>名詞の並列</td></tr><tr><td>나 하 네 록 에 헤</td><td>na ha ne rok e he</td><td>私とあなたは海へ行く</td><td>主語の並列＋方向</td></tr></tbody></table></div>
-<h4 id="examples-6">헤（he）～へ（方向・目的地）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 록 에 헤</td><td>na rok e he</td><td>私は海へ行く</td><td>方向助詞</td></tr><tr><td>네 록 아 헤</td><td>ne rok a he</td><td>あなたは山へ行く</td><td>方向助詞</td></tr><tr><td>나 록 오 에 헤</td><td>na rok o e he</td><td>私は木を海へ運ぶ（動かす）</td><td>方向助詞＋目的語</td></tr></tbody></table></div>
-<h4 id="examples-7">히（hi）～で（場所・手段）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 멕 에 히</td><td>na mek e hi</td><td>私は海で愛する</td><td>場所助詞</td></tr><tr><td>나 렉 오 히</td><td>na rek o hi</td><td>私は木で作る</td><td>手段助詞</td></tr><tr><td>나 락 에 히</td><td>na rak e hi</td><td>私は海で行動する</td><td>場所助詞</td></tr></tbody></table></div>
-<h4 id="examples-8">호（ho）～から（起点・出発点）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 록 에 호</td><td>na rok e ho</td><td>私は海から来る</td><td>起点助詞</td></tr><tr><td>네 략 오 호</td><td>ne ryak o ho</td><td>あなたは木から受け取る</td><td>起点助詞＋受容動詞</td></tr><tr><td>나 록 아 호 에 헤</td><td>na rok a ho e he</td><td>私は山から海へ行く</td><td>起点＋方向</td></tr></tbody></table></div>
-<h4 id="examples-9">후（hu）～の（所属・所有）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 후 오</td><td>na hu o</td><td>私の木</td><td>所有助詞</td></tr><tr><td>네 후 제</td><td>ne hu je</td><td>あなたの家</td><td>所有助詞</td></tr><tr><td>보 후 바</td><td>bo hu ba</td><td>村の世帯</td><td>所属助詞</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-10">終声の使用例</h3>
-<h4 id="examples-11">実体（ㅁ）の使用</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>옴</td><td>om</td><td>（その）木</td><td>概念→実体化</td></tr><tr><td>캄</td><td>kam</td><td>大きいもの</td><td>属性→実体化</td></tr><tr><td>렘</td><td>rem</td><td>作られたもの・作品</td><td>行為→実体化</td></tr><tr><td>남</td><td>nam</td><td>私の体</td><td>人称代名詞の実体化</td></tr><tr><td>나 멕 남</td><td>na mek nam</td><td>私は私の体を愛する</td><td>心と体の区別</td></tr></tbody></table></div>
-<h4 id="examples-12">修飾（ㅂ）の使用</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>멥</td><td>meb</td><td>愛をもって</td><td>方法修飾</td></tr><tr><td>엡</td><td>eb</td><td>海のように</td><td>様態修飾</td></tr><tr><td>압</td><td>ab</td><td>山に関して</td><td>関係修飾</td></tr><tr><td>나 멥 멕</td><td>na meb mek</td><td>私は愛をもって愛する</td><td>修飾＋動詞</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-13">ダブルパッチム（動詞活用）の使用例</h3>
-<h4 id="examples-14">時制</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 멗 네</td><td>na megs ne</td><td>私はあなたを愛した</td><td>過去（ㄳ）</td></tr><tr><td>나 멝 네</td><td>na melg ne</td><td>私はあなたを愛するだろう</td><td>未来（ㄺ）</td></tr></tbody></table></div>
-<h4 id="examples-15">法（モダリティ）</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 멟 네</td><td>na melb ne</td><td>私はあなたを愛したい</td><td>願望（ㄼ）</td></tr><tr><td>나 멚 네</td><td>na menh ne</td><td>私はあなたを愛しない</td><td>否定（ㄶ）</td></tr><tr><td>나 멦 네</td><td>na mebs ne</td><td>私はあなたを愛さなければならない</td><td>義務（ㅄ）</td></tr></tbody></table></div>
-<h4 id="examples-16">アスペクト</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 멡 네</td><td>na melt ne</td><td>私はあなたを愛し終えた</td><td>完了（ㄾ）</td></tr><tr><td>나 멣 네</td><td>na melh ne</td><td>私はあなたを愛している</td><td>継続（ㅀ）</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-17">複合文例</h3>
-<h4 id="examples-18">複数の助詞を含む文</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 록 에 호 아 헤</td><td>na rok e ho a he</td><td>私は海から山へ行く</td><td>起点＋方向</td></tr><tr><td>나 렉 나 후 오 히</td><td>na rek na hu o hi</td><td>私は私の木で作る</td><td>所有＋手段</td></tr><tr><td>나 하 네 멕 에 히</td><td>na ha ne mek e hi</td><td>私とあなたは海で愛する</td><td>並列＋場所</td></tr></tbody></table></div>
-<h4 id="examples-19">ダブルパッチム＋助詞</h4>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 멗 네 후 옴</td><td>na megs ne hu om</td><td>私はあなたの木を愛した</td><td>過去＋所有</td></tr><tr><td>나 멝 에 히</td><td>na melg e hi</td><td>私は海で愛するだろう</td><td>場所＋未来</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-20">身体部位を用いた文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 렉 다 히</td><td>na rek da hi</td><td>私は手で作る</td><td>身体部位＋動詞</td></tr><tr><td>네 록 데 히</td><td>ne rok de hi</td><td>あなたは足で行く</td><td>身体部位＋移動</td></tr><tr><td>나 릭 디 히</td><td>na rik di hi</td><td>私は口で話す</td><td>身体部位＋発話</td></tr><tr><td>나 략 차 두 히</td><td>na ryak cha du hi</td><td>私は耳で音を受け取る</td><td>身体部位＋受容</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-21">自然・環境を用いた文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 록 아 헤</td><td>na rok a he</td><td>私は山へ行く</td><td>自然＋方向</td></tr><tr><td>네 룍 요 히</td><td>ne ryok yo hi</td><td>あなたは森で探索する</td><td>自然＋場所</td></tr><tr><td>나 멕 에</td><td>na mek e</td><td>私は海を愛する</td><td>自然＋目的語</td></tr><tr><td>오 하 아</td><td>o ha a</td><td>木と山</td><td>自然の並列</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-22">社会・共同体を用いた文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 록 제 헤</td><td>na rok je he</td><td>私は家へ行く</td><td>建物＋方向</td></tr><tr><td>네 렉 제 히</td><td>ne rek je hi</td><td>あなたは家で作る</td><td>建物＋場所</td></tr><tr><td>보 후 바</td><td>bo hu ba</td><td>村の世帯</td><td>社会的所属</td></tr><tr><td>나 략 네 후 자</td><td>na ryak ne hu ja</td><td>私はあなたの道具を受け取る</td><td>所有＋受容</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-23">感情・心を用いた文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 맙 멕</td><td>na mab mek</td><td>私は心をこめて愛する</td><td>心＋動詞</td></tr><tr><td>네 몹 렉</td><td>ne mob rek</td><td>あなたは喜んで作る</td><td>感情＋動詞</td></tr><tr><td>나 밉 릭</td><td>na mib rik</td><td>私は考えながら話す</td><td>思考＋発話</td></tr><tr><td>나 략 무</td><td>na ryak mu</td><td>私は恐れを受け入れる</td><td>感情＋受容</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-24">情報・言語を用いた文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 릭 치</td><td>na rik chi</td><td>私は言葉を話す</td><td>発話＋言語</td></tr><tr><td>네 렉 체</td><td>ne rek che</td><td>あなたは文字を作る</td><td>作成＋文字</td></tr><tr><td>나 략 추</td><td>na ryak chu</td><td>私は知識を受け取る</td><td>受容＋知識</td></tr><tr><td>나 릭 챠</td><td>na rik chya</td><td>私は歌を話す（歌う）</td><td>発話＋歌</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-25">属性（形容詞）を用いた文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>오 칼</td><td>o kal</td><td>木は大きい</td><td>名詞＋属性（ㄹ）</td></tr><tr><td>에 켈</td><td>e kel</td><td>海は小さい</td><td>名詞＋属性</td></tr><tr><td>나 킬</td><td>na kil</td><td>私は良い</td><td>人称＋属性</td></tr><tr><td>제 콜</td><td>je kol</td><td>家は新しい</td><td>建物＋属性</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-26">複雑な構造の文</h3>
-<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">ラテン</th><th scope="col">日本語訳</th><th scope="col">解説</th></tr></thead><tbody><tr><td>나 하 네 멗 에 히</td><td>na ha ne megs e hi</td><td>私とあなたは海で愛した</td><td>並列＋場所＋過去</td></tr><tr><td>나 략 오 네 후 제 히</td><td>na ryak o ne hu je hi</td><td>あなたの家で私は木を受け取る</td><td>所有＋場所＋受容</td></tr><tr><td>나 록 아 호 에 헤</td><td>na rok a ho e he</td><td>私は山から海へ行く</td><td>起点＋方向＋移動</td></tr><tr><td>나 맙 멝 네 후 오</td><td>na mab melg ne hu o</td><td>私は心をこめてあなたの木を愛するだろう</td><td>手段＋未来＋所有</td></tr></tbody></table></div>
-<hr>
-<h3 id="examples-27">注釈</h3>
-<ul><li>この例文集は旧104語根辞書（dictionary-v0.3.md）に基づき作成されました。</li><li>ダブルパッチムは動詞（ㄱ終声）にのみ付与できます（例：<code>멕</code> の <code>ㄱ</code> を <code>ㄳ</code> や <code>ㄺ</code> に差し替えて <code>멗</code> や <code>멝</code> にする）。</li><li>格助詞は名詞句の直後に置かれます。하は並列する名詞句の間、후は所有者と被所有者の間に置きます。</li><li>基本語順は SVO で、助詞句はその後に続きます。</li></ul></section><footer>Serohan · セロハン語 <a href="#home">ページの先頭へ ↑</a></footer></main></div></body></html>
+<p>また、すべて標準ハングル入力のみで記述できるため、パソコン・スマートフォンでも特別な入力方法を必要としない。</p></section><section class="chapter" id="examples" aria-label="現行例文集"><div class="chapter-label">SEROHAN / 現行例文集</div><h2 id="examples-1">セロハン語 現行例文 Ver.0.9</h2>
+<p>使用80語根と採用済み5助詞だけの例。訳は文脈による説明であり、固定語義の追加ではない。<a href="history/examples-pre-v0.9.md">旧例文</a>と<a href="#translations">翻訳テスト全60件</a>を区別する。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">セロハン語</th><th scope="col">日本語</th><th scope="col">注記</th></tr></thead><tbody><tr><td>나 멕 네</td><td>私はあなたを愛する</td><td>SVO</td></tr><tr><td>나 몹 렉 자</td><td>私は喜んで道具を作る</td><td>ㅂ様態</td></tr><tr><td>나 렉 자 다 히</td><td>私は手で道具を作る</td><td>手段</td></tr><tr><td>나 록 오 제 헤</td><td>私は木を建物へ運ぶ</td><td>他動用法</td></tr><tr><td>나 록 아 호 칼 이 헤</td><td>私は起伏のある地形から大きな水域へ行く</td><td>海に限定しない</td></tr><tr><td>나 하 네 록 제 헤</td><td>私とあなたは建物へ行く</td><td>2項並列</td></tr><tr><td>콜 켈 출 기 각 제 히</td><td>新しく小さい知識関連媒体が建物にある</td><td>本とは限らない</td></tr><tr><td>나 후 기 후 제 각</td><td>私に関連する、媒体関連の建物がある</td><td>후右結合</td></tr><tr><td>살 툘 차 후 기 각</td><td>時間的で秩序ある音に関連する媒体がある</td><td>音楽は解釈候補</td></tr><tr><td>자 각 나 히</td><td>私のところに道具がある</td><td>所在所有</td></tr><tr><td>네 후 자 각 나 히</td><td>あなたの道具が私のところにある</td><td>所有権は未指定</td></tr><tr><td>나 렉 기. 가 킬.</td><td>私は媒体を作る。それは良い</td><td>対象候補が一つ</td></tr><tr><td>니 멕 차. 니 멕 치.</td><td>ある言語使用者は音を愛する。その人物は言語を愛する</td><td>人物候補が一つ</td></tr><tr><td>나 멚 오</td><td>私は木を愛さない</td><td>従来の活用</td></tr><tr><td>나 멣 퍄 칼 오</td><td>私は大きくない木を愛している</td><td>属性だけ否定</td></tr><tr><td>나 퍄 멗 오</td><td>過去に私が木を愛したということはない</td><td>過去の外側の否定</td></tr><tr><td>나 퍄 멚 오</td><td>私は木を愛さないわけではない</td><td>二重否定</td></tr><tr><td>옴 퍄 칼</td><td>その木は大きくない</td><td>属性述語否定</td></tr><tr><td>자 갆 나 히</td><td>私のところに道具はない</td><td>각の否定</td></tr><tr><td>나 멕 퍄</td><td>私は否定という概念を愛する</td><td>퍄の語彙用法</td></tr><tr><td>네 멕 나 티</td><td>あなたは私を愛しますか</td><td>文末疑問</td></tr></tbody></table></div>
+<p><code>나 멕 티</code>は疑問とも「私は認識を愛する」とも読めるので一意な模範文にしない。焦点否定・全称否定・節接続・補文をこれらの例から推測しない。</p></section><section class="chapter" id="translations" aria-label="翻訳ストレステスト"><div class="chapter-label">SEROHAN / 翻訳ストレステスト</div><h2 id="translations-1">Ver.0.9 翻訳ストレステスト</h2>
+<p>全60件、自作。外部取得0件。出所と取得失敗の記録は監査記録を参照。</p>
+<p>保持度は意味に関する人手評価。構文成功は意味の保持を証明しない。</p>
+<p>保持: 30件／不能: 22件／部分: 8件</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">ID・分類</th><th scope="col">日本語</th><th scope="col">セロハン語</th><th scope="col">逐語訳</th><th scope="col">保持度</th><th scope="col">文法・意味の問題</th><th scope="col">不足概念</th><th scope="col">部分解析</th></tr></thead><tbody><tr><td>1 日常</td><td>私はあなたを愛する。</td><td>나 멕 네</td><td>私 愛する 他者</td><td>保持</td><td>あなたは対話文脈</td><td>なし</td><td>parsed</td></tr><tr><td>2 日常</td><td>あなたは文字を作る。</td><td>네 렉 체</td><td>他者 作る 文字</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>3 日常</td><td>私は手で道具を作る。</td><td>나 렉 자 다 히</td><td>私 作る 道具 手 で</td><td>保持</td><td>手段の解釈は文脈</td><td>なし</td><td>parsed</td></tr><tr><td>4 日常</td><td>私は口で話す。</td><td>나 릭 디 히</td><td>私 発話する 口 で</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>5 日常</td><td>私は水を飲む。</td><td>未訳</td><td>—</td><td>不能</td><td>摂取動詞を口の動詞化だけで確定できない</td><td>飲む</td><td>対象外</td></tr><tr><td>6 日常</td><td>彼は毎朝パンを食べてから学校へ行く。</td><td>未訳</td><td>—</td><td>不能</td><td>語彙・時間順序・従属節が不足</td><td>毎朝、パン、食べる、学校、後</td><td>対象外</td></tr><tr><td>7 所有</td><td>木がある。</td><td>오 각</td><td>木 存在する</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>8 所有</td><td>道具は建物にある。</td><td>자 각 제 히</td><td>道具 存在する 建物 に</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>9 所有</td><td>私のところに道具がある。</td><td>자 각 나 히</td><td>道具 存在する 私 に</td><td>保持</td><td>所有権は含まない</td><td>なし</td><td>parsed</td></tr><tr><td>10 所有</td><td>あなたの道具が私のところにある。</td><td>네 후 자 각 나 히</td><td>他者 関連 道具 存在する 私 に</td><td>保持</td><td>道具の所有関係は文脈</td><td>なし</td><td>parsed</td></tr><tr><td>11 所有</td><td>私はこの家を法的に所有している。</td><td>未訳</td><td>—</td><td>不能</td><td>所在所有では所有権を保証できない</td><td>この、法的所有</td><td>対象外</td></tr><tr><td>12 所有</td><td>森の中には誰もいなかった。</td><td>未訳</td><td>—</td><td>不能</td><td>不在、過去、量化、内部位置を同時に表せない</td><td>誰も、中</td><td>対象外</td></tr><tr><td>13 感情</td><td>私は恐れを受け入れる。</td><td>나 략 무</td><td>私 受容する 恐れ</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>14 感情</td><td>私は喜んで作る。</td><td>나 몹 렉</td><td>私 喜びをもって 作る</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>15 感情</td><td>私は愛をもって話す。</td><td>나 멥 릭</td><td>私 愛をもって 発話する</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>16 感情</td><td>私は悲しいが、あなたの成功を喜んでいる。</td><td>未訳</td><td>—</td><td>不能</td><td>逆接と節の目的語化がない</td><td>悲しみ、成功、逆接</td><td>対象外</td></tr><tr><td>17 感情</td><td>私はあなたに怒っているわけではない。</td><td>未訳</td><td>—</td><td>不能</td><td>否定自体は可能でも怒るの述語が未定</td><td>怒る、対人方向</td><td>対象外</td></tr><tr><td>18 感情</td><td>私は暗い場所を恐れる。</td><td>나 묵 풀 소</td><td>私 恐れ行為 暗い 場所</td><td>部分</td><td>묵の動詞語義は恐怖体験として未固定</td><td>恐れるの項構造</td><td>parsed</td></tr><tr><td>19 時間移動</td><td>私は山へ行く。</td><td>나 록 아 헤</td><td>私 移動する 地形 へ</td><td>部分</td><td>아は山専用ではない</td><td>山の特定</td><td>parsed</td></tr><tr><td>20 時間移動</td><td>私は建物へ行った。</td><td>나 롟 제 헤</td><td>私 過去移動 建物 へ</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>21 時間移動</td><td>あなたは建物へ行くだろう。</td><td>네 롥 제 헤</td><td>他者 未来移動 建物 へ</td><td>保持</td><td>予測の確実性は未指定</td><td>なし</td><td>parsed</td></tr><tr><td>22 時間移動</td><td>私は木を建物へ運ぶ。</td><td>나 록 오 제 헤</td><td>私 移動させる 木 建物 へ</td><td>保持</td><td>既存록の他動用法</td><td>なし</td><td>parsed</td></tr><tr><td>23 時間移動</td><td>私は山から海へ行く。</td><td>나 록 아 호 칼 이 헤</td><td>私 移動 地形 から 大きい 液体 へ</td><td>部分</td><td>山・海を厳密に特定しない</td><td>地形と水域の分類</td><td>parsed</td></tr><tr><td>24 時間移動</td><td>昨日、彼が来る前に私は家を出た。</td><td>未訳</td><td>—</td><td>不能</td><td>相対時間と従属節と指示が不足</td><td>昨日、前、家を出る</td><td>対象外</td></tr><tr><td>25 時間移動</td><td>明日までに必ず仕事を終えなければならない。</td><td>未訳</td><td>—</td><td>不能</td><td>期限、義務、完了を重ねられない</td><td>明日、期限、仕事、必ず</td><td>対象外</td></tr><tr><td>26 否定</td><td>私は木を愛していない。</td><td>나 멚 오</td><td>私 愛さない 木</td><td>保持</td><td>無標時制、非進行性は文脈</td><td>なし</td><td>parsed</td></tr><tr><td>27 否定</td><td>私が愛しているのは木ではない。</td><td>未訳</td><td>—</td><td>不能</td><td>焦点構文と等値否定がない</td><td>関係節、等値</td><td>対象外</td></tr><tr><td>28 否定</td><td>私は大きくない木を愛している。</td><td>나 멣 퍄 칼 오</td><td>私 継続愛 否定 大きい 木</td><td>保持</td><td>否定は大きさのみ</td><td>なし</td><td>parsed</td></tr><tr><td>29 否定</td><td>誰も木を愛していない。</td><td>未訳</td><td>—</td><td>不能</td><td>人の否定を全称否定に読み替えられない</td><td>全称量化</td><td>対象外</td></tr><tr><td>30 否定</td><td>私は木を愛していなかった。</td><td>나 퍄 멗 오</td><td>私 否定 過去愛 木</td><td>部分</td><td>過去の成立を否定、過去継続相は同時標示しない</td><td>過去継続の明示</td><td>parsed</td></tr><tr><td>31 否定</td><td>私は木を愛していないわけではない。</td><td>나 퍄 멚 오</td><td>私 否定 愛さない 木</td><td>保持</td><td>緩叙の含意は文脈</td><td>なし</td><td>parsed</td></tr><tr><td>32 否定</td><td>その木は大きくない。</td><td>옴 퍄 칼</td><td>木実体 否定 大きい</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>33 否定</td><td>私は大きくなく新しい木を愛する。</td><td>나 멕 퍄 칼 콜 오</td><td>私 愛する 否定 大きい 新しい 木</td><td>保持</td><td>新しさには否定がかからない</td><td>なし</td><td>parsed</td></tr><tr><td>34 否定</td><td>私のところに道具はない。</td><td>자 퍄 각 나 히</td><td>道具 否定 存在する 私 に</td><td>保持</td><td>法的所有は未指定</td><td>なし</td><td>parsed</td></tr><tr><td>35 否定</td><td>私はあなたを愛している状態ではない。</td><td>나 퍄 멣 네</td><td>私 否定 継続愛 他者</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>36 疑問</td><td>あなたは私を愛しますか。</td><td>네 멕 나 티</td><td>他者 愛する 私 疑問</td><td>保持</td><td>この音列は部分文法内で一意</td><td>なし</td><td>parsed</td></tr><tr><td>37 疑問</td><td>木は大きいですか。</td><td>오 칼 티</td><td>木 大きい 疑問</td><td>保持</td><td>属性述語は目的語を取らない</td><td>なし</td><td>parsed</td></tr><tr><td>38 疑問</td><td>私は愛しますか。</td><td>나 멕 티</td><td>私 愛する 疑問／認識</td><td>部分</td><td>目的語티の平叙文とも解析される</td><td>疑問標識の分離</td><td>ambiguous</td></tr><tr><td>39 疑問</td><td>あなたは何を探していますか。</td><td>未訳</td><td>—</td><td>不能</td><td>Yes/No疑問では代替できない</td><td>疑問詞</td><td>対象外</td></tr><tr><td>40 疑問</td><td>誰の道具がどの建物にありますか。</td><td>未訳</td><td>—</td><td>不能</td><td>所有者・選択の疑問がない</td><td>誰、どの</td><td>対象外</td></tr><tr><td>41 因果条件</td><td>雨が降ったので道が濡れている。</td><td>未訳</td><td>—</td><td>不能</td><td>因果節と天候語彙が不足</td><td>雨、濡れる、因果</td><td>対象外</td></tr><tr><td>42 因果条件</td><td>もし明日晴れたら、二人で海へ行こう。</td><td>未訳</td><td>—</td><td>不能</td><td>条件、勧誘、人数が不足</td><td>晴れ、明日、二、条件</td><td>対象外</td></tr><tr><td>43 因果条件</td><td>私は作り、そしてあなたは話す。</td><td>未訳</td><td>—</td><td>不能</td><td>独立文二つでは接続の意味を符号化できない</td><td>節並列</td><td>対象外</td></tr><tr><td>44 因果条件</td><td>私はあなたを愛するが、あなたは私を愛さない。</td><td>未訳</td><td>—</td><td>不能</td><td>逆接未採用</td><td>逆接</td><td>対象外</td></tr><tr><td>45 因果条件</td><td>私は木が大きいと思う。</td><td>未訳</td><td>—</td><td>不能</td><td>思考の補文が未採用</td><td>補文境界</td><td>対象外</td></tr><tr><td>46 因果条件</td><td>彼は私が来ないと言った。</td><td>未訳</td><td>—</td><td>不能</td><td>発話、補文、過去、否定の節帰属が未定</td><td>補文、人物指示</td><td>対象外</td></tr><tr><td>47 複数人物</td><td>私とあなたは建物へ行く。</td><td>나 하 네 록 제 헤</td><td>私 と 他者 移動 建物 へ</td><td>保持</td><td>2項の単純名詞句並列</td><td>なし</td><td>parsed</td></tr><tr><td>48 複数人物</td><td>私はあなたの道具を受け取る。</td><td>나 략 네 후 자</td><td>私 受け取る 他者 関連 道具</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>49 複数人物</td><td>太郎は花子に彼の本を渡した。</td><td>未訳</td><td>—</td><td>不能</td><td>固有名、間接目的、彼の照応が未定</td><td>固有名、受益格、照応</td><td>対象外</td></tr><tr><td>50 複数人物</td><td>私とあなたと彼は互いに助け合う。</td><td>未訳</td><td>—</td><td>不能</td><td>3項並列と相互性がない</td><td>彼、互いに、助ける</td><td>対象外</td></tr><tr><td>51 複数人物</td><td>ある人は音を愛する。その人は言語を愛する。</td><td>니 멕 차. 니 멕 치.</td><td>言語を扱う人 愛する 音。その人 愛する 言語</td><td>部分</td><td>niは一般の人より狭い。人物候補が一人の文脈に限定</td><td>人一般</td><td>parsed, parsed</td></tr><tr><td>52 抽象</td><td>私は知識を受け取る。</td><td>나 략 추</td><td>私 受容する 知識</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>53 抽象</td><td>私は自由を愛する。</td><td>나 멕 테</td><td>私 愛する 自由</td><td>保持</td><td>なし</td><td>なし</td><td>parsed</td></tr><tr><td>54 抽象</td><td>私は否定という概念を愛する。</td><td>나 멕 퍄</td><td>私 愛する 否定</td><td>保持</td><td>퍄はここでは目的語</td><td>なし</td><td>parsed</td></tr><tr><td>55 抽象</td><td>私は真理を愛する。</td><td>나 멕 타</td><td>私 愛する 真理</td><td>保持</td><td>타は条件標識ではない</td><td>なし</td><td>parsed</td></tr><tr><td>56 抽象</td><td>新しく小さい本が建物にある。</td><td>콜 켈 출 기 각 제 히</td><td>新しい 小さい 知識属性 情報媒体 存在 建物 に</td><td>部分</td><td>媒体は本に限定されない</td><td>書籍の限定</td><td>parsed</td></tr><tr><td>57 抽象</td><td>規則が少ないほど言語を学びやすい。</td><td>未訳</td><td>—</td><td>不能</td><td>比例、比較、学習可能性がない</td><td>ほど、容易、学ぶ</td><td>対象外</td></tr><tr><td>58 抽象</td><td>正しいと思われていたことが必ずしも真実ではない。</td><td>未訳</td><td>—</td><td>不能</td><td>補文、受動、過去、全称の否定が不足</td><td>受動、必ずしも、等値</td><td>対象外</td></tr><tr><td>59 抽象</td><td>音楽に関する情報媒体を作る。</td><td>나 렉 살 툘 차 후 기</td><td>私 作る 時間属性 秩序属性 音 関連 媒体</td><td>部分</td><td>主語を補い、音楽を厳密に特定しない</td><td>音楽の固定語義</td><td>parsed</td></tr><tr><td>60 抽象</td><td>私は情報媒体を作る。それは良い。</td><td>나 렉 기. 가 킬.</td><td>私 作る 媒体。対象 良い</td><td>保持</td><td>対象候補が媒体だけの談話。人格主語は対象候補から除く</td><td>なし</td><td>parsed, parsed</td></tr></tbody></table></div></section><section class="chapter" id="grammar-v06" aria-label="歴史資料 Ver.0.6"><div class="chapter-label">SEROHAN / 歴史資料 Ver.0.6</div><blockquote><strong>新版への案内</strong>：この文書はVer.0.6当時の仕様を保存したものです。名詞句の左側修飾と <code>후</code> の連続は <a href="#grammar-v07">Ver.0.7 複合修飾仕様</a> で拡張・右結合に統一されています。Ver.0.7では角括弧による無音のスコープ区切りは採用しません。Ver.0.7の使用語根は80、未使用枠は24です。</blockquote>
+<h2 id="grammar-v06-1">セロハン語 Ver.0.6 文法拡張仕様（暫定採用）</h2>
+<p>更新日：2026-11-06</p>
+<p>この文書はVer.0.5を補足し、ユーザーが選択した3つの設計方針をVer.0.6の採用規則として記録する。104語根、SVO語順、CV語根と終声の五機能（∅概念・ㄱ行為・ㄹ属性・ㅂ修飾・ㅁ実体）は変更しない。未決定部分を推測で確定しない。</p>
+<h3 id="grammar-v06-2">1. 全語根の属性化（採用）</h3>
+<p>任意の辞書収録CV語根 X から、終声ㄹによる属性形 Xㄹ を生成できる。意味は「Xに関連する性質を持つ」とし、具体的な関連性は文脈で決める。辞書に個別の派生語登録は必須ではない。</p>
+<p>属性形は中心語の<strong>前</strong>に置く。複数の属性形を連続使用でき、そのすべてが最後の中心語に直接かかる。順序は基本的に意味の階層を作らない。</p>
+<ul><li><code>출 잠</code>：知識に関する道具（知識＋属性化、道具＋個体化）</li><li><code>콜 켈 짐</code>：新しく小さい本（両属性が本を修飾）</li><li><code>옴 칼.</code>：その木は大きい（従来どおり属性の述語用法）</li></ul>
+<p><code>ㅂ</code> 形は引き続き動詞などの様態修飾を担い、<code>ㄹ</code> 形の名詞句修飾と区別する。これらの語の意味は文脈次第であり、上記訳を固定した語義としない。</p>
+<h3 id="grammar-v06-3">2. 후 の一般的関連関係（採用）</h3>
+<p><code>A 후 B</code> は「Aに関連するB」を表す名詞句である。所有・所属はその具体的な解釈として含まれる。<code>후</code> 自体は所有か主題かを区別しない。</p>
+<ul><li><code>나 후 짐</code>：私に関係する本／私の本</li><li><code>추 후 잠</code>：知識に関連する道具</li><li><code>보 후 님</code>：村に関係する人</li></ul>
+<p>初版では結合範囲を限定する。</p>
+<ul><li><code>A</code> は原則として単独の概念語（終声なし）または実体語（ㅁ）。</li><li><code>B</code> は <code>属性形* + 中心語</code> の名詞句。</li><li><code>나 후 콜 짐</code> は <code>[나 후 [콜 짐]]</code> と解析する。</li><li><code>후</code> の入れ子、左側の複合名詞句、長い並列構文との組み合わせは保留。</li></ul>
+<p><code>출 잠</code>（道具の属性）と <code>추 후 잠</code>（知識との関連関係）は同じ表現として扱わないが、実際の指示対象は重なり得る。</p>
+<h3 id="grammar-v06-4">3. 文末 티 のYes/No疑問（採用）</h3>
+<p>独立した平叙文の最後に無終声の <code>티</code> を置くと、その文全体の真偽を尋ねるYes/No疑問になる。書き言葉では直後に <code>?</code> を付す。</p>
+<ul><li><code>네 멕 나.</code> → <code>네 멕 나 티?</code>：あなたは私を愛しますか？</li><li><code>옴 칼.</code> → <code>옴 칼 티?</code>：その木は大きいですか？</li><li><code>나 멕 티.</code> → <code>나 멕 티 티?</code>：私は「知」という概念を愛しますか？</li></ul>
+<p>既存語根 <code>티</code>（知）と文法用法 <code>티</code> は同形。疑問マーカーは文末専用とするが、音声での境界衝突や、名詞が末尾にあるときの完全な曖昧性解消は未確定。Yes/No以外の「何・誰・どこ」などの疑問詞はこの仕様では導入しない。</p>
+<h3 id="grammar-v06-5">4. 部分文法（適用可能な範囲）</h3>
+<p>以下は全構文を定義する完全なEBNFではなく、今回追加した名詞句と疑問文の範囲を示す。</p>
+<pre><code>語根         := 辞書に収録したCV
+概念語       := 語根
+実体語       := 語根＋ㅁ
+属性形       := 語根＋ㄹ
+中心語       := 概念語 | 実体語
+単純名詞句   := 属性形* 中心語
+名詞句       := 単純名詞句 | (概念語 | 実体語) 후 単純名詞句
+疑問文       := 完結した平叙文 티 ?</code></pre>
+<p>文の基本語順は引き続き SVO。目的語のない動詞文、属性述語文、既存の格助詞句も引き続き使用できる。完全な構文解析では、述語と名詞句の境界の形式化が課題として残る。</p>
+<h3 id="grammar-v06-6">5. 採用していない追加提案</h3>
+<p>次の項目は以前の検討で挙がったが、今回選択された3項目には含まれないため、<strong>採用済みとして扱わない</strong>。</p>
+<ul><li><code>퍄</code> を全述語の前に置く否定マーカーとする案（現行の動詞否定活用 <code>ㄶ</code> は維持）</li><li><code>각</code> を存在動詞とする案</li><li><code>A B</code> 型の等値文</li><li>概念語 <code>가</code> の照応指示詞としての用法</li><li>通常の概念語を疑問詞に転用する案</li><li>3項目以上の並列、修飾の入れ子、関係節、従属節</li><li>時制・否定・相の活用の重ね合わせ</li></ul>
+<h3 id="grammar-v06-7">6. 今後の検証事項</h3>
+<ol><li>複数の属性形と述語の境界を一意に解析できるか。</li><li><code>후</code> の広い意味と、名詞句の入れ子制限が実用上十分か。</li><li>文末 <code>티</code> が概念語 <code>티</code> と衝突する場合の音声規則。</li><li>指示・否定・等値・疑問詞をどう最小の語彙で実現するか。</li></ol>
+<p>以上の未解決項目は、確定したものとして例文や辞書に混入させない。</p></section><section class="chapter" id="grammar-v07" aria-label="歴史資料 Ver.0.7"><div class="chapter-label">SEROHAN / 歴史資料 Ver.0.7</div><h2 id="grammar-v07-1">セロハン語 Ver.0.7 複合修飾と音声で解釈できる関連句（試験採用）</h2>
+<p>更新日：2026-11-06</p>
+<p>この文書は <a href="#grammar-v06">Ver.0.6</a> の複数属性修飾と後置助詞 <code>후</code> の範囲を拡張する。<strong>同じ音列が書記上の括弧の有無だけで別の文法構造にならない</strong>ことを優先する。語根は <a href="#dictionary">Ver.0.7辞書</a> の使用80語根のみで、未使用24枠の派生語は作らない。SVO、語根と終声の五機能、文末疑問 <code>티</code> は変更しない。</p>
+<h3 id="grammar-v07-2">1. 複数の属性形は並列修飾</h3>
+<p>連続した属性形（語根＋ㄹ）は、すべて後続の中心語を直接修飾する。並べる順番だけでは属性間の階層を作らない。</p>
+<ul><li><code>콜 켈 기</code>：新しく小さい情報媒体</li><li><code>살 툘 차</code>：時間に関わり秩序をもつ音（音楽・リズムなどの候補）</li><li><code>몰 툘 라</code>：喜びに関わり秩序をもつ活動（ゲーム・遊びなどの候補）</li></ul>
+<p>これらの日本語訳は説明のための意味候補であり、特定の日本語の名詞を確定させるものではない。</p>
+<h3 id="grammar-v07-3">2. 후 による関連付けは必ず右結合</h3>
+<p><code>후</code> を続けたとき、<strong>右側の関連句が先にまとまる</strong>（右結合）。書記と発話で同じ順序・同じ構造になる。</p>
+<ul><li><code>나 후 기</code>：私に関連する情報媒体</li><li><code>나 후 콜 기</code>：私に関連する新しい情報媒体</li><li><code>나 후 기 후 제</code>：私に関連する「情報媒体に関連する建物」</li><li><code>살 툘 차 후 기</code>：時間的に秩序だった音に関連する情報媒体</li><li><code>나 후 살 툘 차 후 기</code>：私に関連する「時間的に秩序だった音に関連する情報媒体」</li></ul>
+<p>例 <code>A 후 B 후 C</code> は常に <code>A 후 (B 후 C)</code> と解釈する。後者の丸括弧は<strong>解説専用のメタ表記</strong>であり、正式な文には書かず、読み上げもしない。</p>
+<p><code>후</code> の左側には単純名詞句（<code>属性形* + 中心語</code>）を使える。右側には単純名詞句または右結合の関連句を使える。<code>후</code> は所有、内容、材料、目的、所属などの関係を個別に区別しない。</p>
+<h3 id="grammar-v07-4">3. 左結合が必要な場合</h3>
+<p><code>(A 후 B) 후 C</code> のような<strong>左結合を、発音できない角括弧で表す規則は廃止</strong>する。Ver.0.7ではその構造を一つの名詞句として符号化できない。</p>
+<ul><li><code>나 후 기 후 제</code> を「『私の情報媒体』に関係する建物」の意味に読むことは<strong>できない</strong>。右結合の解釈だけを採る。</li><li>左結合に相当する意味を伝えたい場合は、当面<strong>短い複数の文に分けて説明</strong>する。ただし「それ」「これは」などの照応方法や、名詞句同士の等値文は未確定なので、正式な例文を勝手に作らない。</li><li>将来必要なら、発音可能な境界標識や照応表現を別途設計する。現時点では追加しない。</li></ul>
+<h3 id="grammar-v07-5">4. 名詞句の部分文法</h3>
+<p>以下の文法は名詞句内の <code>후</code> の結合方向に限る。書き言葉での角括弧・丸括弧は構文に含まない。</p>
+<pre><code>語根          := Ver.0.7辞書で「使用」のCV
+属性形        := 語根 + ㄹ
+中心語        := 語根 | 語根 + ㅁ
+単純名詞句    := 属性形* 中心語
+名詞句        := 単純名詞句 (후 名詞句)?</code></pre>
+<p>右再帰により <code>A 후 B 후 C</code> は必ず <code>A 후 (B 후 C)</code> に相当する構造となる。名詞句の終端、述語との境界、他の助詞との組み合わせまで完全に解析できると主張するものではない。</p>
+<h3 id="grammar-v07-6">5. 文の使用例</h3>
+<ul><li><code>네 렉 몰 툘 라.</code>：あなたは喜びに関連し秩序のある活動を作る（ゲーム制作などの解釈候補）。</li><li><code>네 렉 몰 툘 라 후 기.</code>：あなたはゲーム的な活動に関連する情報媒体を作る。</li><li><code>나 멕 살 툘 차 후 기.</code>：私は音楽的な音に関連する情報媒体を好む。</li></ul>
+<p>上記はいずれも <strong>使用80語根のみ</strong>から組み立てた説明例であり、「ゲーム」「音楽」等の固定語義を新設しない。</p>
+<h3 id="grammar-v07-7">6. 音声と書記の原則・未解決課題</h3>
+<ol><li><strong>必須の文法的区別は音声でも伝えられること</strong>。発音できない括弧に文法上の意味を持たせない。</li><li>複数属性形は並列、<code>후</code> は右結合という規則を共有することで、構文上の結合方向を統一する。</li><li>文脈による意味の曖昧さ（所有か内容かなど）は残る。これは結合構造の曖昧さとは別問題。</li><li>長い句の聞き取りやすさ、自然な休止、照応、左結合の言い換え、属性述語と名詞句の境界は今後検証する。</li><li>新たな助詞・関係節・等値文・発音可能な区切りマーカーは、この改訂では採用しない。</li></ol>
+<p>この文書は <a href="#grammar-v06">Ver.0.6仕様</a> に優先する、Ver.0.7の最新の複合修飾規則とする。</p></section><section class="chapter" id="grammar-v08" aria-label="歴史資料 Ver.0.8"><div class="chapter-label">SEROHAN / 歴史資料 Ver.0.8</div><h2 id="grammar-v08-1">セロハン語 Ver.0.8 存在・所有・照応（試験採用）</h2>
+<p>Ver.0.7の80語根、SVO、修飾と後置助詞の右結合を維持する。新しい語根・助詞は増やさず、発音できない記号に文法上の役割を与えない。</p>
+<h3 id="grammar-v08-2">存在動詞</h3>
+<p>既存語根 <code>가</code>（物・対象）から、<code>ㄱ</code>終声の動詞形<code>각</code>を「存在する・ある・いる」として採用する。</p>
+<ul><li><code>옴 각.</code>：木が存在する。</li><li><code>기 각 제 히.</code>：情報媒体が建物にある。</li><li><code>네 각 소 히.</code>：あなたはその場所にいる。</li></ul>
+<p>構文：<code>存在主体 각 (所在先 히)</code>。存在主体が主語であり、<code>히</code>句は場所・関係先。</p>
+<h3 id="grammar-v08-3">所在を用いる所有</h3>
+<p><code>X 각 Y 히</code>は「YのところにXがある」。文脈によって「YがXを持つ」と解釈する。</p>
+<ul><li><code>자 각 나 히.</code>：私に道具がある／私は道具を持っている。</li><li><code>자 각 네 히.</code>：あなたのところに道具がある。</li><li><code>나 후 자 각.</code>：私に関係する道具が存在する。</li><li><code>네 후 자 각 나 히.</code>：あなたに関係する道具が私のところにある。</li></ul>
+<p><code>히</code>は存在文では所在・関係先を示すが、法的所有権まで指定しない。所有・関連を表す<code>후</code>と、存在文の所在を表す<code>히</code>は機能が異なる。</p>
+<h3 id="grammar-v08-4">照応（制限付き試験採用）</h3>
+<p>既存の<code>가</code>（対象）と<code>니</code>（言葉を扱う人）は、先行する話題に<strong>対象が一つだけ</strong>ある場合、それを指し直すことができる。</p>
+<ul><li><code>나 렉 기. 가 킬.</code>：私は情報媒体を作る。それは良い。</li><li><code>니 멕 차. 니 멕 치.</code>：ある人物は音を好む。その人物は言語を好む。</li></ul>
+<p>候補となる対象が複数あれば、照応先が曖昧になるためこの用法は避ける。<code>나</code>（私）、<code>네</code>（他者）の基本用法は維持。</p>
+<h3 id="grammar-v08-5">文の接続（未採用の検討案）</h3>
+<ul><li><code>節A 하 節B</code>：「そして」。名詞の並列との境界が不明。</li><li><code>節A 호 節B</code>：「だから」。起点助詞との境界が不明。</li><li><code>節A 타 節B</code>：「もし」。真理の語義との衝突が不明。</li></ul>
+<p>接続詞としてはまだ正式採用しない。独立文を並べることはできるが、それだけで因果や条件は確定しない。</p>
+<h3 id="grammar-v08-6">未解決</h3>
+<p>所在と所有権の区別、照応先が複数ある場合、文の接続と音声上の節境界、存在動詞の否定や時制の具体的運用は今後検証する。Ver.0.7の修飾規則は引き続き有効。</p></section><section class="chapter" id="migration" aria-label="歴史資料 語根移行表"><div class="chapter-label">SEROHAN / 歴史資料 語根移行表</div><h2 id="migration-1">Ver.0.7 語根圧縮・移行表（暫定）</h2>
+<p>104枠のうち80語根を使用、24枠を未使用にする案。これらは辞書の確定語義ではなく、Ver.0.6の属性修飾および <code>후</code> による関連を利用した説明表現。◎比較的自然、○文脈によって可能、△精度不足。なお、未使用語根から終声派生を作らない。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">未使用</th><th scope="col">旧意味</th><th scope="col">代替表現案</th><th scope="col">評価</th><th scope="col">留意点</th></tr></thead><tbody><tr><td>교</td><td>大地</td><td>아（地形・陸地）</td><td>○</td><td>地表・大地の広がりまでは特定しない</td></tr><tr><td>규</td><td>機械部品</td><td>쥬 후 갸</td><td>◎</td><td>機械の構成要素</td></tr><tr><td>냐</td><td>子ども</td><td>샬 니</td><td>○</td><td>初期段階の人。年齢区分は文脈</td></tr><tr><td>뉴</td><td>家畜</td><td>바 후 누</td><td>○</td><td>家畜以外の家庭動物も含み得る</td></tr><tr><td>댜</td><td>指</td><td>다 후 갸</td><td>○</td><td>手の部分だが指に限定しない</td></tr><tr><td>됴</td><td>顔</td><td>도 후 소</td><td>△</td><td>目の位置と顔は同義でない</td></tr><tr><td>듀</td><td>内臓</td><td>남 후 갸</td><td>△</td><td>身体の部分であり内部とは限らない</td></tr><tr><td>먀</td><td>感情</td><td>마</td><td>◎</td><td>心の語義を一般化</td></tr><tr><td>묘</td><td>自然への感情</td><td>아 후 마</td><td>△</td><td>地形に関する心に限定される</td></tr><tr><td>뮤</td><td>人工への興味</td><td>자 후 미</td><td>△</td><td>思考と興味は異なる</td></tr><tr><td>뱌</td><td>家庭</td><td>바</td><td>○</td><td>世帯と家庭の感情面は区別しない</td></tr><tr><td>뵤</td><td>国土</td><td>노 후 아</td><td>△</td><td>国の領域と群れの陸地は異なる</td></tr><tr><td>쇼</td><td>季節</td><td>오 후 사</td><td>△</td><td>周期・季節性の表現が弱い</td></tr><tr><td>에</td><td>海</td><td>칼 이</td><td>○</td><td>湖や水量とも解釈可能</td></tr><tr><td>요</td><td>森</td><td>오 후 노</td><td>○</td><td>木の集まり</td></tr><tr><td>유</td><td>川</td><td>롤 이</td><td>○</td><td>水の流れであり地形ではない</td></tr><tr><td>지</td><td>本</td><td>출 기</td><td>○</td><td>知識の媒体全般</td></tr><tr><td>쟈</td><td>装置</td><td>갸 후 자</td><td>○</td><td>部品に関する道具</td></tr><tr><td>죠</td><td>建物</td><td>제</td><td>◎</td><td>建造された空間へ一般化</td></tr><tr><td>챠</td><td>歌</td><td>찰 치</td><td>△</td><td>音に関わる言語で旋律を特定しない</td></tr><tr><td>쵸</td><td>歴史</td><td>쿨 추</td><td>○</td><td>古い知識と歴史は同義ではない</td></tr><tr><td>토</td><td>世界観</td><td>고 후 미</td><td>○</td><td>世界に関する思考</td></tr><tr><td>탸</td><td>原理</td><td>타 후 툐</td><td>△</td><td>真理と秩序の関連で原理は不確定</td></tr><tr><td>퓨</td><td>損失</td><td>부 후 파</td><td>△</td><td>財産以外の損失を表しにくい</td></tr></tbody></table></div>
+<h3 id="migration-2">今後の再検討</h3>
+<ul><li><code>됴</code>（顔）、<code>듀</code>（内臓）、<code>쇼</code>（季節）、<code>뮤</code>（興味）、<code>챠</code>（歌）、<code>탸</code>（原理）の代替は意味が不十分。</li><li>内部／外部、流れ、周期、境界、旋律、関心、法則などの汎用概念を優先検討する。</li><li>母音8系列の意味は再設計中であり、全80語根について初声×母音からの推測可能性をテストする。</li><li>旧例文に現れる未使用語根（例：<code>에</code>・<code>요</code>・<code>지</code>・<code>챠</code>）は旧版の用例とみなす。</li></ul></section><footer>Serohan · セロハン語 <a href="#home">ページの先頭へ ↑</a></footer></main></div></body></html>

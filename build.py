@@ -7,14 +7,16 @@ ROOT = Path(__file__).resolve().parent
 PAGES = [
     ('overview', '設計概要', 'overview.md'),
     ('grammar', '基本文法', 'grammar.md'),
-    ('grammar-v06', 'Ver.0.6 文法拡張', 'grammar-v0.6.md'),
-    ('grammar-v07', 'Ver.0.7 複合修飾', 'grammar-v0.7-compounds.md'),
-    ('grammar-v08', 'Ver.0.8 存在・所有', 'grammar-v0.8-existence.md'),
+    ('grammar-v09', 'Ver.0.9 否定・設計判断', 'grammar-v0.9.md'),
     ('dictionary', '語根辞書', 'dictionary.md'),
-    ('migration', 'Ver.0.7 移行表', 'lexicon-v0.7-migration.md'),
     ('particles', '助詞', 'particles.md'),
-    ('verb-inflection', '動詞活用案', 'verb-inflection.md'),
-    ('examples', '例文集', 'examples.md'),
+    ('verb-inflection', '動詞活用（試験運用）', 'verb-inflection.md'),
+    ('examples', '現行例文集', 'examples.md'),
+    ('translations', '翻訳ストレステスト', 'translation-report.md'),
+    ('grammar-v06', '歴史資料 Ver.0.6', 'grammar-v0.6.md'),
+    ('grammar-v07', '歴史資料 Ver.0.7', 'grammar-v0.7-compounds.md'),
+    ('grammar-v08', '歴史資料 Ver.0.8', 'grammar-v0.8-existence.md'),
+    ('migration', '歴史資料 語根移行表', 'lexicon-v0.7-migration.md'),
 ]
 
 
@@ -100,7 +102,7 @@ def render(source, slug):
 
 
 def build():
-    navigation = ''.join(f'<a href="#{slug}"><span>0{i}</span>{label}</a>' for i, (slug, label, _) in enumerate(PAGES, 1))
+    navigation = ''.join(f'<a href="#{slug}"><span>{i:02d}</span>{label}</a>' for i, (slug, label, _) in enumerate(PAGES, 1))
     articles = []
     for slug, label, filename in PAGES:
         search = ''
