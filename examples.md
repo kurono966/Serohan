@@ -204,7 +204,7 @@
 
 ## 注釈
 
-* すべての例文は dictionary.md、abstract.md、joshi.md、doublepacchim.md の定義に基づいて作成されています。
+* すべての例文は dictionary.md、overview.md、particles.md、verb-inflection.md の定義に基づいて作成されています。
 * ダブルパッチムは動詞（ㄱ終声）にのみ付与できます（例：`멕` の `ㄱ` を `ㄳ` や `ㄺ` に差し替えて `멗` や `멝` にする）。
 * 格助詞は名詞句の直後に置かれます。하は並列する名詞句の間、후は所有者と被所有者の間に置きます。
 * 基本語順は SVO で、助詞句はその後に続きます。

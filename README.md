@@ -2,6 +2,21 @@
 
 ハングル一音節の語根に終声を付け、概念・行為・属性・修飾・実体を切り替える人工言語。セロ語の姉妹言語として、規則性と小さな文法を目指す。
 
+## ウェブ版の開き方
+
+[index.html](index.html) をブラウザーで開くと、全6章をウェブサイト形式で閲覧できる。サーバーやインターネット接続は不要。語根辞書はハングル・ラテン転写・日本語で検索できる。JavaScriptが無効でも本文は読める。
+
+資料を編集するときはMarkdownを更新し、このフォルダーで `python build.py` を実行してHTMLを再生成する。Python 3の標準ライブラリのみ使用し、追加パッケージは不要。
+
+| ファイル | 内容 |
+| --- | --- |
+| `index.html` | ブラウザーで読むウェブ版 |
+| `assets/style.css` | 画面・スマートフォン・印刷用のスタイル |
+| `assets/site.js` | 辞書検索と章リンクの選択表示 |
+| `build.py` | MarkdownからHTMLを再生成するスクリプト |
+
+ファイル名は `abstract.md` → `overview.md`、`joshi.md` → `particles.md`、`doublepacchim.md` → `verb-inflection.md` に変更し、資料内の参照も更新した。
+
 ```text
 메       愛という概念
 멕       愛する
@@ -18,11 +33,11 @@
 
 ## 読む順番
 
-1. [設計概要](abstract.md)：理念・文字・語形成。
+1. [設計概要](overview.md)：理念・文字・語形成。
 2. [基本文法](grammar.md)：語順・修飾・句のまとまり・読み方。
 3. [語根辞書](dictionary.md)：104語根と意味領域。
-4. [助詞](joshi.md)：採用済み5語と予約語。
-5. [動詞活用案](doublepacchim.md)：複合終声の割り当て。
+4. [助詞](particles.md)：採用済み5語と予約語。
+5. [動詞活用案](verb-inflection.md)：複合終声の割り当て。
 6. [例文集](examples.md)：文法の使用例。
 
 ## 現在の範囲
