@@ -9,6 +9,7 @@ PAGES = [
     ('grammar', '基本文法', 'grammar.md'),
     ('grammar-v06', 'Ver.0.6 文法拡張', 'grammar-v0.6.md'),
     ('dictionary', '語根辞書', 'dictionary.md'),
+    ('migration', 'Ver.0.7 移行表', 'lexicon-v0.7-migration.md'),
     ('particles', '助詞', 'particles.md'),
     ('verb-inflection', '動詞活用案', 'verb-inflection.md'),
     ('examples', '例文集', 'examples.md'),
