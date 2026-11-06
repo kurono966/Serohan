@@ -1,3 +1,5 @@
+> **Ver.0.7 語彙に関する注記**：この概要は旧104語根体系の例示を含みます。現在の圧縮案は [dictionary.md](dictionary.md)（80使用・24未使用）、詳細は [lexicon-v0.7-migration.md](lexicon-v0.7-migration.md) を参照してください。母音の再設計は未確定です。
+
 # セロハン語（Serohan）設計概要 Ver.0.5
 
 ## 概要
