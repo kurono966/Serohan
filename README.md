@@ -19,18 +19,6 @@
 | --- | --- | --- |
 | 1 | [overview.md](overview.md) | 設計概要 |
 | 2 | [grammar.md](grammar.md) | 基本文法 |
-<<<<<<< HEAD
-| 3 | [grammar-v0.9.md](grammar-v0.9.md) | 否定の新規則・接続の比較・未解決事項 |
-| 4 | [dictionary.md](dictionary.md) | 語根配置Ver.0.7を維持（80使用・24未使用） |
-| 5 | [particles.md](particles.md) | 5助詞と予約語 |
-| 6 | [verb-inflection.md](verb-inflection.md) | 7種の試験運用活用 |
-| 7 | [examples.md](examples.md) | 80語根による現行例文 |
-| 8 | [translation-report.md](translation-report.md) | 自作60件の検証 |
-| 歴史1 | [history/grammar-v0.6.md](history/grammar-v0.6.md) | 暫定採用の記録 |
-| 歴史2 | [history/grammar-v0.7-compounds.md](history/grammar-v0.7-compounds.md) | 複数修飾・후右結合 |
-| 歴史3 | [history/grammar-v0.8-existence.md](history/grammar-v0.8-existence.md) | 存在・所在所有・照応 |
-| 歴史4 | [history/lexicon-v0.7-migration.md](history/lexicon-v0.7-migration.md) | 旧語根の移行候補 |
-=======
 | 3 | [grammar-v0.9.md](grammar-v0.9.md) | Ver.0.9 否定・設計判断 |
 | 4 | [grammar-v1.1.md](grammar-v1.1.md) | Ver.1.1 統合仕様 |
 | 5 | [auxiliaries-v1.0.md](auxiliaries-v1.0.md) | 助動詞の採用履歴 |
@@ -41,11 +29,10 @@
 | 10 | [verb-inflection.md](verb-inflection.md) | 動詞活用（試験運用） |
 | 11 | [examples.md](examples.md) | 現行例文集 |
 | 12 | [translation-report.md](translation-report.md) | 翻訳ストレステスト |
-| 13 | [grammar-v0.6.md](grammar-v0.6.md) | 歴史資料 Ver.0.6 |
-| 14 | [grammar-v0.7-compounds.md](grammar-v0.7-compounds.md) | 歴史資料 Ver.0.7 |
-| 15 | [grammar-v0.8-existence.md](grammar-v0.8-existence.md) | 歴史資料 Ver.0.8 |
-| 16 | [lexicon-v0.7-migration.md](lexicon-v0.7-migration.md) | 歴史資料 語根移行表 |
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
+| 13 | [history/grammar-v0.6.md](history/grammar-v0.6.md) | 歴史資料 Ver.0.6 |
+| 14 | [history/grammar-v0.7-compounds.md](history/grammar-v0.7-compounds.md) | 歴史資料 Ver.0.7 |
+| 15 | [history/grammar-v0.8-existence.md](history/grammar-v0.8-existence.md) | 歴史資料 Ver.0.8 |
+| 16 | [history/lexicon-v0.7-migration.md](history/lexicon-v0.7-migration.md) | 歴史資料 語根移行表 |
 
 ## 検証と設計判断
 

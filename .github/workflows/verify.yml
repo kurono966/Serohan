@@ -16,8 +16,4 @@ jobs:
       - run: python audit_lexicon.py
       - run: python integrate_v11.py
       - run: python build.py
-<<<<<<< HEAD
-      - run: git diff --exit-code -- translation-cases.json translation-report.md history/audit-lexemes.json index.html
-=======
-      - run: git diff --exit-code -- translation-cases.json translation-report.md audit-lexemes.json grammar-v1.1.md v1.1-translations.json v1.1-translations.md index.html
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
+      - run: git diff --exit-code -- translation-cases.json translation-report.md history/audit-lexemes.json grammar-v1.1.md v1.1-translations.json v1.1-translations.md index.html

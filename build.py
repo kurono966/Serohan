@@ -26,16 +26,12 @@ PAGES = [
 ]
 
 
-<<<<<<< HEAD
-def inline(text, source_dir):
-=======
 def heading_fragment(text):
     return ''.join(c for c in text.lower() if c in '-_' or
                    not unicodedata.category(c).startswith(('P', 'S'))).replace(' ', '-')
 
 
-def inline(text, slug=None):
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
+def inline(text, slug, source_dir):
     text = escape(text)
     # Protect inline code before applying other inline syntax.
     codes = []
@@ -45,15 +41,11 @@ def inline(text, slug=None):
     text = re.sub(r'`([^`]+)`', code, text)
     def link(match):
         label, target = match.groups()
-<<<<<<< HEAD
-        if not re.match(r'(?:[A-Za-z][A-Za-z0-9+.-]*:|[\/#])', target):
-            target = normpath((source_dir / target).as_posix())
-        for slug, _, filename in PAGES:
-=======
         if slug and target.startswith('#'):
             target = '#' + slug + '-' + target[1:]
+        elif not re.match(r'(?:[A-Za-z][A-Za-z0-9+.-]*:|/)', target):
+            target = normpath((source_dir / target).as_posix())
         for page_slug, _, filename in PAGES:
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
             if target == filename:
                 target = '#' + page_slug
         return f'<a href="{target}">{label}</a>'
@@ -62,11 +54,11 @@ def inline(text, slug=None):
     return re.sub(r'\x00(\d+)\x00', lambda m: codes[int(m[1])], text)
 
 
-def render(source, slug, filename):
+def render(source, slug, filename=''):
     source_dir = PurePosixPath(filename).parent
 
     def render_inline(text):
-        return inline(text, source_dir)
+        return inline(text, slug, source_dir)
 
     lines = source.splitlines()
     output, i, heading = [], 0, 0
@@ -90,17 +82,13 @@ def render(source, slug, filename):
             match = re.match(r'^(#{1,6}) (.*)', line)
             level = min(len(match[1]) + 1, 6)
             heading += 1
-<<<<<<< HEAD
-            output.append(f'<h{level} id="{slug}-{heading}">{render_inline(match[2])}</h{level}>')
-=======
             fragment = heading_fragment(match[2])
             count = fragments.get(fragment, 0)
             fragments[fragment] = count + 1
             if count:
                 fragment += '-' + str(count)
             alias = f'<span id="{slug}-{fragment}"></span>'
-            output.append(f'<h{level} id="{slug}-{heading}">{alias}{inline(match[2], slug)}</h{level}>')
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
+            output.append(f'<h{level} id="{slug}-{heading}">{alias}{render_inline(match[2])}</h{level}>')
             i += 1
         elif line.startswith('|'):
             rows = []
@@ -110,27 +98,16 @@ def render(source, slug, filename):
                     rows.append(cells)
                 i += 1
             table = '<div class="table-wrap"><table><thead><tr>'
-<<<<<<< HEAD
             table += ''.join('<th scope="col">' + render_inline(c) + '</th>' for c in rows[0])
             table += '</tr></thead><tbody>'
             for row in rows[1:]:
                 table += '<tr>' + ''.join('<td>' + render_inline(c) + '</td>' for c in row) + '</tr>'
-=======
-            table += ''.join('<th scope="col">' + inline(c, slug) + '</th>' for c in rows[0])
-            table += '</tr></thead><tbody>'
-            for row in rows[1:]:
-                table += '<tr>' + ''.join('<td>' + inline(c, slug) + '</td>' for c in row) + '</tr>'
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
             output.append(table + '</tbody></table></div>')
         elif re.fullmatch('-{3,}', line):
             output.append('<hr>')
             i += 1
         elif line.startswith('> '):
-<<<<<<< HEAD
             output.append('<blockquote>' + render_inline(line[2:]) + '</blockquote>')
-=======
-            output.append('<blockquote>' + inline(line[2:], slug) + '</blockquote>')
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
             i += 1
         elif re.match(r'^([-*] |\d+\. )', line):
             ordered = bool(re.match(r'^\d+\.', line))
@@ -138,11 +115,7 @@ def render(source, slug, filename):
             items = []
             pattern = r'^\d+\. ' if ordered else r'^[-*] '
             while i < len(lines) and re.match(pattern, lines[i].strip()):
-<<<<<<< HEAD
                 items.append('<li>' + render_inline(re.sub(pattern, '', lines[i].strip())) + '</li>')
-=======
-                items.append('<li>' + inline(re.sub(pattern, '', lines[i].strip()), slug) + '</li>')
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
                 i += 1
             output.append(f'<{tag}>' + ''.join(items) + f'</{tag}>')
         else:
@@ -151,11 +124,7 @@ def render(source, slug, filename):
             while i < len(lines) and lines[i].strip() and not special(lines[i].strip()):
                 paragraph.append(lines[i].strip())
                 i += 1
-<<<<<<< HEAD
             output.append('<p>' + render_inline(' '.join(paragraph)) + '</p>')
-=======
-            output.append('<p>' + inline(' '.join(paragraph), slug) + '</p>')
->>>>>>> 24f66a7c90d4983d7a7b3f767027fd75b6bebbf0
     return '\n'.join(output)
 
 
