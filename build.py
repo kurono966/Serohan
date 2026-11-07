@@ -1,6 +1,7 @@
 """Build the offline documentation site with Python's standard library."""
 from html import escape
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+from posixpath import normpath
 import re
 
 ROOT = Path(__file__).resolve().parent
@@ -13,14 +14,14 @@ PAGES = [
     ('verb-inflection', '動詞活用（試験運用）', 'verb-inflection.md'),
     ('examples', '現行例文集', 'examples.md'),
     ('translations', '翻訳ストレステスト', 'translation-report.md'),
-    ('grammar-v06', '歴史資料 Ver.0.6', 'grammar-v0.6.md'),
-    ('grammar-v07', '歴史資料 Ver.0.7', 'grammar-v0.7-compounds.md'),
-    ('grammar-v08', '歴史資料 Ver.0.8', 'grammar-v0.8-existence.md'),
-    ('migration', '歴史資料 語根移行表', 'lexicon-v0.7-migration.md'),
+    ('grammar-v06', '歴史資料 Ver.0.6', 'history/grammar-v0.6.md'),
+    ('grammar-v07', '歴史資料 Ver.0.7', 'history/grammar-v0.7-compounds.md'),
+    ('grammar-v08', '歴史資料 Ver.0.8', 'history/grammar-v0.8-existence.md'),
+    ('migration', '歴史資料 語根移行表', 'history/lexicon-v0.7-migration.md'),
 ]
 
 
-def inline(text):
+def inline(text, source_dir):
     text = escape(text)
     # Protect inline code before applying other inline syntax.
     codes = []
@@ -30,6 +31,8 @@ def inline(text):
     text = re.sub(r'`([^`]+)`', code, text)
     def link(match):
         label, target = match.groups()
+        if not re.match(r'(?:[A-Za-z][A-Za-z0-9+.-]*:|[\/#])', target):
+            target = normpath((source_dir / target).as_posix())
         for slug, _, filename in PAGES:
             if target == filename:
                 target = '#' + slug
@@ -39,7 +42,12 @@ def inline(text):
     return re.sub(r'\x00(\d+)\x00', lambda m: codes[int(m[1])], text)
 
 
-def render(source, slug):
+def render(source, slug, filename):
+    source_dir = PurePosixPath(filename).parent
+
+    def render_inline(text):
+        return inline(text, source_dir)
+
     lines = source.splitlines()
     output, i, heading = [], 0, 0
     def special(line):
@@ -61,7 +69,7 @@ def render(source, slug):
             match = re.match(r'^(#{1,6}) (.*)', line)
             level = min(len(match[1]) + 1, 6)
             heading += 1
-            output.append(f'<h{level} id="{slug}-{heading}">{inline(match[2])}</h{level}>')
+            output.append(f'<h{level} id="{slug}-{heading}">{render_inline(match[2])}</h{level}>')
             i += 1
         elif line.startswith('|'):
             rows = []
@@ -71,16 +79,16 @@ def render(source, slug):
                     rows.append(cells)
                 i += 1
             table = '<div class="table-wrap"><table><thead><tr>'
-            table += ''.join('<th scope="col">' + inline(c) + '</th>' for c in rows[0])
+            table += ''.join('<th scope="col">' + render_inline(c) + '</th>' for c in rows[0])
             table += '</tr></thead><tbody>'
             for row in rows[1:]:
-                table += '<tr>' + ''.join('<td>' + inline(c) + '</td>' for c in row) + '</tr>'
+                table += '<tr>' + ''.join('<td>' + render_inline(c) + '</td>' for c in row) + '</tr>'
             output.append(table + '</tbody></table></div>')
         elif re.fullmatch('-{3,}', line):
             output.append('<hr>')
             i += 1
         elif line.startswith('> '):
-            output.append('<blockquote>' + inline(line[2:]) + '</blockquote>')
+            output.append('<blockquote>' + render_inline(line[2:]) + '</blockquote>')
             i += 1
         elif re.match(r'^([-*] |\d+\. )', line):
             ordered = bool(re.match(r'^\d+\.', line))
@@ -88,7 +96,7 @@ def render(source, slug):
             items = []
             pattern = r'^\d+\. ' if ordered else r'^[-*] '
             while i < len(lines) and re.match(pattern, lines[i].strip()):
-                items.append('<li>' + inline(re.sub(pattern, '', lines[i].strip())) + '</li>')
+                items.append('<li>' + render_inline(re.sub(pattern, '', lines[i].strip())) + '</li>')
                 i += 1
             output.append(f'<{tag}>' + ''.join(items) + f'</{tag}>')
         else:
@@ -97,7 +105,7 @@ def render(source, slug):
             while i < len(lines) and lines[i].strip() and not special(lines[i].strip()):
                 paragraph.append(lines[i].strip())
                 i += 1
-            output.append('<p>' + inline(' '.join(paragraph)) + '</p>')
+            output.append('<p>' + render_inline(' '.join(paragraph)) + '</p>')
     return '\n'.join(output)
 
 
@@ -108,7 +116,7 @@ def build():
         search = ''
         if slug == 'dictionary':
             search = '<div class="search"><label for="dictionary-search">語根を探す</label><input id="dictionary-search" type="search" placeholder="ハングル・ラテン転写・日本語で検索" autocomplete="off"><p id="search-status" role="status" aria-live="polite"></p></div>'
-        articles.append(f'<section class="chapter" id="{slug}" aria-label="{label}"><div class="chapter-label">SEROHAN / {label}</div>{search}' + render((ROOT / filename).read_text(encoding='utf-8'), slug) + '</section>')
+        articles.append(f'<section class="chapter" id="{slug}" aria-label="{label}"><div class="chapter-label">SEROHAN / {label}</div>{search}' + render((ROOT / filename).read_text(encoding='utf-8'), slug, filename) + '</section>')
     html = '''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="ハングル一音節に、概念と役割を。人工言語セロハン語の文法・80語根・例文を読むための資料サイト。"><title>Serohan — セロハン語</title><link rel="stylesheet" href="assets/style.css"><script src="assets/site.js" defer></script></head>
 <body><a class="skip" href="#main">本文へ移動</a><header class="topbar"><a class="brand" href="#home">세로한 <span>SEROHAN</span></a><span class="edition">LANGUAGE NOTES · 2026</span></header>

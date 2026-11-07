@@ -25,16 +25,16 @@
 | 6 | [verb-inflection.md](verb-inflection.md) | 7種の試験運用活用 |
 | 7 | [examples.md](examples.md) | 80語根による現行例文 |
 | 8 | [translation-report.md](translation-report.md) | 自作60件の検証 |
-| 歴史1 | [grammar-v0.6.md](grammar-v0.6.md) | 暫定採用の記録 |
-| 歴史2 | [grammar-v0.7-compounds.md](grammar-v0.7-compounds.md) | 複数修飾・후右結合 |
-| 歴史3 | [grammar-v0.8-existence.md](grammar-v0.8-existence.md) | 存在・所在所有・照応 |
-| 歴史4 | [lexicon-v0.7-migration.md](lexicon-v0.7-migration.md) | 旧語根の移行候補 |
+| 歴史1 | [history/grammar-v0.6.md](history/grammar-v0.6.md) | 暫定採用の記録 |
+| 歴史2 | [history/grammar-v0.7-compounds.md](history/grammar-v0.7-compounds.md) | 複数修飾・후右結合 |
+| 歴史3 | [history/grammar-v0.8-existence.md](history/grammar-v0.8-existence.md) | 存在・所在所有・照応 |
+| 歴史4 | [history/lexicon-v0.7-migration.md](history/lexicon-v0.7-migration.md) | 旧語根の移行候補 |
 
 ## 検証と設計判断
 
-[audit-v0.9.md](audit-v0.9.md)に矛盾、取得失敗、採用履歴を記録。[grammar-v0.9.md](grammar-v0.9.md)に接続・否定の採否と理由を記載する。節接続、補文、等値否定、量化、3項並列、후と하の混在は未採用／未定。文末티の音声上の曖昧性も残る。
+[audit-v0.9.md](history/audit-v0.9.md)に矛盾、取得失敗、採用履歴を記録。[grammar-v0.9.md](grammar-v0.9.md)に接続・否定の採否と理由を記載する。節接続、補文、等値否定、量化、3項並列、후と하の混在は未採用／未定。文末티の音声上の曖昧性も残る。
 
-実行結果と変更ファイル一覧は[validation-results.md](validation-results.md)。
+実行結果と変更ファイル一覧は[validation-results.md](history/validation-results.md)。
 
 ```text
 python -m unittest discover -s tests -v
@@ -49,6 +49,6 @@ Python 3.10以降の標準ライブラリだけで実行できる。`parsed`は�
 
 ## 保存資料
 
-整理前のREADME・概要・基本文法・助詞・活用・例文を[history/README-pre-v0.9.md](history/README-pre-v0.9.md)などに原文のまま保存した。[dictionary-v0.3.md](dictionary-v0.3.md)は旧104語根辞書。0.6～0.8の仕様ファイルは改変していない。
+整理前のREADME・概要・基本文法・助詞・活用・例文を[history/README-pre-v0.9.md](history/README-pre-v0.9.md)などに原文のまま保存した。[dictionary-v0.3.md](history/dictionary-v0.3.md)は旧104語根辞書。旧仕様・旧辞書・当時の監査記録は [history](history/) にまとめた。
 
 Web版の生成は `build.py`、表示は `assets/style.css`・`assets/site.js`。Markdownや翻訳データを変更したら生成物も更新する。main反映後は既存GitHub ActionsがHTMLを更新する。GitHub Pagesの想定公開先は [kurono966.github.io/Serohan](https://kurono966.github.io/Serohan/)。
